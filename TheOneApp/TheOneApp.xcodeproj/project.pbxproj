@@ -14,6 +14,7 @@
 		A747FAC4274FB17000355FE0 /* TheOneAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747FAC3274FB17000355FE0 /* TheOneAppUITests.swift */; };
 		A747FAC6274FB17000355FE0 /* TheOneAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747FAC5274FB17000355FE0 /* TheOneAppUITestsLaunchTests.swift */; };
 		A747FAD5274FE75F00355FE0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747FAD4274FE75F00355FE0 /* APIManager.swift */; };
+		A747FAD8274FEA0900355FE0 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747FAD7274FEA0900355FE0 /* HTTPError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		A747FAC3274FB17000355FE0 /* TheOneAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheOneAppUITests.swift; sourceTree = "<group>"; };
 		A747FAC5274FB17000355FE0 /* TheOneAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheOneAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A747FAD4274FE75F00355FE0 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		A747FAD7274FEA0900355FE0 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		A747FAA7274FB16F00355FE0 /* TheOneApp */ = {
 			isa = PBXGroup;
 			children = (
+				A747FAD6274FE9ED00355FE0 /* Enumerations */,
 				A747FAD2274FE74200355FE0 /* API */,
 				A747FAA8274FB16F00355FE0 /* TheOneAppApp.swift */,
 				A747FAAC274FB17000355FE0 /* Assets.xcassets */,
@@ -133,6 +136,14 @@
 				A747FAD4274FE75F00355FE0 /* APIManager.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		A747FAD6274FE9ED00355FE0 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				A747FAD7274FEA0900355FE0 /* HTTPError.swift */,
+			);
+			path = Enumerations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A747FAD5274FE75F00355FE0 /* APIManager.swift in Sources */,
+				A747FAD8274FEA0900355FE0 /* HTTPError.swift in Sources */,
 				A747FAA9274FB16F00355FE0 /* TheOneAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
