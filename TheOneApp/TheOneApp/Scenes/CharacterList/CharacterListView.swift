@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct CharacterListView: View {
+    
+    @StateObject var viewModel: CharacterListViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("HOLA")
+            ForEach(viewModel.characters) { character in
+                Text(character.name)
+                
+            }
+            
+        }
     }
 }
 
 struct CharacterListView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterListView()
+        CharacterListView(viewModel: CharacterListViewModel())
     }
 }
