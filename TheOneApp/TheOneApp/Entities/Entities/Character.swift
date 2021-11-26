@@ -1,0 +1,23 @@
+//
+//  Character.swift
+//  TheOneApp
+//
+//  Created by Silvia España on 25/11/21.
+//
+
+import Foundation
+
+struct Character: Identifiable {
+    
+    let id: String
+    let height: String
+    let race: String
+    let gender: String
+    let birth: String
+    let spouse: String
+    let death: String
+    let realm: String
+    let hair: String
+    let name: String
+    let wikiURL: String
+}
