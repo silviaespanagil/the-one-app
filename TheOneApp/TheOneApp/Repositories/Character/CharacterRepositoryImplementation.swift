@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-import UIKit
 
 class CharacterRepositoryImplementation: CharacterRepository {
     
@@ -19,13 +18,15 @@ class CharacterRepositoryImplementation: CharacterRepository {
     }
     
     
-    func getAllCharacters() -> AnyPublisher<[Character], Error> {
+    func getAllCharacters(page: Int) -> AnyPublisher<[Character], Error> {
         
-        return dataSource.getAllCharacters().map { serverCharacter -> [Character] in
+        return dataSource.getAllCharacters(page: page).map {
+            
+            serverCharacter -> [Character] in
             
             var characters: [Character] = []
             
-            for serverCharacter in serverCharacter.results {
+            for serverCharacter in serverCharacter.docs {
                 
                 let character = serverCharacter.convertToEntity()
                 characters.append(character)
