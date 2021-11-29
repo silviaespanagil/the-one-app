@@ -13,12 +13,29 @@ struct CharacterListView: View {
     
     var body: some View {
         VStack {
-            Text("HOLA")
             ForEach(viewModel.characters) { character in
-                Text(character.name)
+                VStack() {
+                    
+                    Text(character.name)
+                    Text("Iluvatar ayudame")
+                }
+                .onAppear {
+                    
+                    if character == viewModel.characters.last {
+                        
+                        viewModel.getAllCharacters(page: viewModel.currentPage)
+                    }
+                }
                 
             }
             
+        }
+        .onAppear {
+            
+            if viewModel.characters.isEmpty {
+                
+                viewModel.getAllCharacters(page: 1)
+            }
         }
     }
 }
