@@ -21,7 +21,10 @@ class APIManager {
     
     func performRequest<T: Decodable>(urlRequest: URLRequest) -> AnyPublisher<T, Error> {
         
-        return session.dataTaskPublisher(for: urlRequest)
+        var request = urlRequest
+        request.setValue(Constants.authorizationHeader, forHTTPHeaderField: "Authorization")
+        
+        return session.dataTaskPublisher(for: request)
             .mapError { $0 as Error }
             .tryMap { data, response -> Data in
                 
