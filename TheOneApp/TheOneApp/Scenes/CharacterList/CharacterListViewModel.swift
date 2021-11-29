@@ -15,19 +15,21 @@ class CharacterListViewModel: ObservableObject {
     
     @Published public private(set) var showProgressView = false
     
+    var currentPage = 1
+    
     private var cancellable: AnyCancellable?
     
     init() {
-        getAllCharacters()
+        getAllCharacters(page: currentPage)
     }
     
     // MARK: - Methods
     
-    func getAllCharacters() {
+    func getAllCharacters(page: Int) {
         
         showProgressView = true
         
-        cancellable = GetAllCharactersUseCase().execute()
+        cancellable = GetAllCharactersUseCase().execute(page: page)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [self] completion in
                 
@@ -35,6 +37,7 @@ class CharacterListViewModel: ObservableObject {
                 
                 switch completion {
                 case .finished:
+                    self.currentPage += 1
                     break
                     
                 case .failure:
@@ -42,8 +45,10 @@ class CharacterListViewModel: ObservableObject {
                 }
                 
             }, receiveValue: {(characters: [Character]) in
-                
-                self.characters = characters
+                print(characters)
+                self.characters.append(contentsOf: characters)
+                print(characters)
             })
     }
+   
 }
