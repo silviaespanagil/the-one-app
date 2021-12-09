@@ -23,7 +23,7 @@ struct CharacterListView: View {
                 
             ForEach(viewModel.characters) { character in
                 
-                CharacterCellView(id: character.id, race: character.race ?? "Race unknown", birth: character.birth ?? "Unknown birthdate", death: character.death ?? "Unknown deathdate", name: character.name ?? "", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")
+                CharacterCellView(id: character.id, race: character.race ?? "", name: character.name ?? "", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")
             }}
             
         }
