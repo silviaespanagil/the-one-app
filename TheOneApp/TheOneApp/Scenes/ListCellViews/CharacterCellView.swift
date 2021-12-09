@@ -11,7 +11,7 @@ struct CharacterCellView: View {
     
     let id: String
     let race: String?
-    let name: String?
+    let name: String
     let image: String
     
     init(id: String, race: String?, name: String, image: String) {
@@ -34,7 +34,7 @@ struct CharacterCellView: View {
             
             VStack {
                 
-                Text(name ?? "")
+                Text(name)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 Text(race ?? "")
                     .frame(maxWidth: .infinity, alignment: .leading)

@@ -11,6 +11,10 @@ import Combine
 
 class CharacterListViewModel: ObservableObject {
     
+    private var originalCharacters: [Character] = []
+    
+    @Published public private(set) var sortCharacters = ["Sort by", "A-Z", "Z-A"]
+    
     @Published public private(set) var characters: [Character] = []
     
     @Published public private(set) var showProgressView = false
@@ -42,8 +46,26 @@ class CharacterListViewModel: ObservableObject {
                 
             }, receiveValue: { (characters: [Character] ) in
                 
+                self.originalCharacters.append(contentsOf: characters)
                 self.characters.append(contentsOf: characters)
             })
     }
    
+    func sortByAbc(_ selection: Int) {
+        
+        if selection == sortCharacters.count {
+            
+            // All values
+            self.characters = self.originalCharacters
+            
+        } else if selection == 1 {
+            
+            self.characters = self.originalCharacters.sorted { $0.name < $1.name }
+        }  //TODO: Check with Xavi .reverse() or other options
+        
+        /*else if selection == 2 {
+            
+            self.characters = self.originalCharacters.sorted { $0.name > $1.name }
+        }*/
+    }
 }
