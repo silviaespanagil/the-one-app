@@ -11,17 +11,15 @@ struct CharacterCellView: View {
     
     let id: String
     let race: String?
-    let gender: String?
     let birth: String?
     let death: String?
     let name: String?
     let image: String
     
-    init(id: String, race: String?, gender: String?, birth: String?, death: String?, name: String, image: String) {
+    init(id: String, race: String?, birth: String?, death: String?, name: String, image: String) {
         
         self.id = id
         self.race = race
-        self.gender = gender
         self.birth = birth
         self.death = death
         self.name = name
@@ -42,7 +40,7 @@ struct CharacterCellView: View {
                 
                 Text(name ?? "")
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Text(gender ?? "")
+                Text(race ?? "")
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
                 HStack {
@@ -58,6 +56,6 @@ struct CharacterCellView: View {
 
 struct CharacterCellView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterCellView(id: "id", race: "Men", gender: "Male", birth: "March 1, 2931", death: "Fo.A. 120 ", name: "Aragorn II, Elessar", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")
+        CharacterCellView(id: "id", race: "Men", birth: "March 1, 2931", death: "Fo.A. 120 ", name: "Aragorn II, Elessar", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")
     }
 }
