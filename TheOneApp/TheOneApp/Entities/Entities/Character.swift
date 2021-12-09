@@ -18,7 +18,7 @@ struct Character: Identifiable, Equatable {
     let death: String?
     let realm: String?
     let hair: String?
-    let name: String?
+    let name: String
     let wikiURL: String?
 
 }

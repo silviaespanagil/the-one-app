@@ -19,7 +19,7 @@ struct ServerCharacterResponse: Codable {
     let death: String?
     let realm: String?
     let hair: String?
-    let name: String?
+    let name: String
     let wikiURL: String?
     
     func convertToEntity() -> Character {
@@ -33,7 +33,7 @@ struct ServerCharacterResponse: Codable {
                          death: death ?? "",
                          realm: realm ?? "",
                          hair: hair ?? "",
-                         name: name ?? "",
+                         name: name,
                          wikiURL: wikiURL ?? "")
     }
 }
