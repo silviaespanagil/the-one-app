@@ -18,19 +18,22 @@ struct CharacterListView: View {
             List {
                 
                 if viewModel.showProgressView {
+                    
                     ProgressViewView()
                 }
                 
-            ForEach(viewModel.characters) { character in
+                ForEach(viewModel.characters) { character in
+                    
+                    CharacterCellView(id: character.id, race: character.race ?? "", name: character.name ?? "", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")
+                }
                 
-                CharacterCellView(id: character.id, race: character.race ?? "", name: character.name ?? "", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")
-            }}
+            }
             
         }
         .onAppear {
-
+            
             if viewModel.characters.isEmpty {
-
+                
                 viewModel.getAllCharacters(page: 1)
             }
         }
@@ -38,7 +41,9 @@ struct CharacterListView: View {
 }
 
 struct CharacterListView_Previews: PreviewProvider {
+    
     static var previews: some View {
+        
         CharacterListView(viewModel: CharacterListViewModel())
     }
 }
