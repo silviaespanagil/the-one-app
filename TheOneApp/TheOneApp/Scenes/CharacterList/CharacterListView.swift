@@ -14,7 +14,12 @@ struct CharacterListView: View {
     var body: some View {
         
         VStack {
+            
             List {
+                
+                if viewModel.showProgressView {
+                    ProgressViewView()
+                }
                 
             ForEach(viewModel.characters) { character in
                 
