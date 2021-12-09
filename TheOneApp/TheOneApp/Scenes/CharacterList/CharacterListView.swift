@@ -14,22 +14,12 @@ struct CharacterListView: View {
     var body: some View {
         
         VStack {
-            Text("-.-")
+            List {
+                
             ForEach(viewModel.characters) { character in
                 
-                VStack() {
-                    
-                    Text(character.name ?? "")
-                }
-                .onAppear {
-                    
-                    if character == viewModel.characters.last {
-                        
-                        viewModel.getAllCharacters(page: viewModel.currentPage)
-                    }
-                }
-                
-            }
+                CharacterCellView(id: character.id, race: character.race ?? "Race unknown", birth: character.birth ?? "Unknown birthdate", death: character.death ?? "Unknown deathdate", name: character.name ?? "", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")
+            }}
             
         }
         .onAppear {
