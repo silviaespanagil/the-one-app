@@ -10,7 +10,8 @@ import Combine
 
 class CharacterDataSource {
     
-    static let getAllCharactersURL: String = "character/"
+    static let getAllCharactersURL: String = "character"
+    static let getPage: String = "?page="
     
     private let baseURLString: String
     private let session: URLSession
@@ -21,11 +22,11 @@ class CharacterDataSource {
         self.session = session
     }
     
-    func getAllCharacters() -> AnyPublisher<ServerBaseArrayResponse<ServerCharacterResponse>, Error> {
+    func getAllCharacters(page: Int) -> AnyPublisher<ServerBaseArrayResponse<ServerCharacterResponse>, Error> {
         
         let apiManager = APIManager(baseURL: baseURLString,session: session)
         
-        let urlRequest = getAllCharactersEndpoint()
+        let urlRequest = getAllCharactersEndpoint(page: page)
         
         return apiManager.performRequest(urlRequest: urlRequest)
         
@@ -36,14 +37,13 @@ class CharacterDataSource {
 
 extension CharacterDataSource {
     
-    func getAllCharactersEndpoint() -> URLRequest{
+    func getAllCharactersEndpoint(page:Int) -> URLRequest {
         
-        let endpoint = "\(baseURLString)\(CharacterDataSource.getAllCharactersURL)"
+        let endpoint = "\(baseURLString)\(CharacterDataSource.getAllCharactersURL)\(CharacterDataSource.getPage)\(page)"
         
         let components = URLComponents(string: endpoint)
         
-        var urlRequest = URLRequest(url: (components?.url!)!)
-        urlRequest.setValue(String(format: Constants.authorizationHeader), forHTTPHeaderField: "Authorization")
+        let urlRequest = URLRequest(url: (components?.url!)!)
         
         return urlRequest
     }

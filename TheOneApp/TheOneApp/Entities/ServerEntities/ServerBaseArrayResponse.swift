@@ -9,6 +9,6 @@ import Foundation
 
 struct ServerBaseArrayResponse<T: Codable>: Codable {
     
-    let results: [T]
+    let docs: [T]
 }
 

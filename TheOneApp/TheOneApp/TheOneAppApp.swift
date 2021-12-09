@@ -11,7 +11,7 @@ import SwiftUI
 struct TheOneAppApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
+            CharacterListView(viewModel: CharacterListViewModel())
         }
     }
 }

@@ -7,17 +7,18 @@
 
 import Foundation
 
-struct Character: Identifiable {
+struct Character: Identifiable, Equatable {
     
     let id: String
-    let height: String
-    let race: String
-    let gender: String
-    let birth: String
-    let spouse: String
-    let death: String
-    let realm: String
-    let hair: String
-    let name: String
-    let wikiURL: String
+    let height: String?
+    let race: String?
+    let gender: String?
+    let birth: String?
+    let spouse: String?
+    let death: String?
+    let realm: String?
+    let hair: String?
+    let name: String?
+    let wikiURL: String?
+
 }
