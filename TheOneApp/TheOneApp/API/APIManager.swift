@@ -47,7 +47,7 @@ class APIManager {
                 
                 return Result.Publisher(data)
                     .setFailureType(to: Error.self)
-                    .decode(type: T.self, decoder: decoder)
+                    .decode(type: T.self, decoder: decoder)  //TODO: CHECK
                     .eraseToAnyPublisher()
             }
             .mapError { $0 as Error}

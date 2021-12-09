@@ -20,15 +20,14 @@ class CharacterRepositoryImplementation: CharacterRepository {
     
     func getAllCharacters(page: Int) -> AnyPublisher<[Character], Error> {
         
-        return dataSource.getAllCharacters(page: page).map {
-            
-            serverCharacter -> [Character] in
+        return dataSource.getAllCharacters(page: page).map { serverCharacter -> [Character] in
             
             var characters: [Character] = []
             
             for serverCharacter in serverCharacter.docs {
                 
                 let character = serverCharacter.convertToEntity()
+                
                 characters.append(character)
             }
             

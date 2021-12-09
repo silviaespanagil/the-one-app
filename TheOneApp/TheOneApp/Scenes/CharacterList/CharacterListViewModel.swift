@@ -19,10 +19,6 @@ class CharacterListViewModel: ObservableObject {
     
     private var cancellable: AnyCancellable?
     
-    init() {
-        getAllCharacters(page: currentPage)
-    }
-    
     // MARK: - Methods
     
     func getAllCharacters(page: Int) {
@@ -44,10 +40,9 @@ class CharacterListViewModel: ObservableObject {
                     break
                 }
                 
-            }, receiveValue: {(characters: [Character]) in
-                print(characters)
+            }, receiveValue: { (characters: [Character] ) in
+                
                 self.characters.append(contentsOf: characters)
-                print(characters)
             })
     }
    

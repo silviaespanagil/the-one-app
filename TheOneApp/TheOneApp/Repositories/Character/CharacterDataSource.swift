@@ -11,10 +11,11 @@ import Combine
 class CharacterDataSource {
     
     static let getAllCharactersURL: String = "character"
+    static let getPage: String = "?page="
     
     private let baseURLString: String
     private let session: URLSession
-    static let getPage: String = "?page="
+    
     init(baseURL: String = Constants.baseURL, session: URLSession = URLSession.shared) {
         
         self.baseURLString = baseURL
@@ -36,7 +37,7 @@ class CharacterDataSource {
 
 extension CharacterDataSource {
     
-    func getAllCharactersEndpoint(page:Int) -> URLRequest{
+    func getAllCharactersEndpoint(page:Int) -> URLRequest {
         
         let endpoint = "\(baseURLString)\(CharacterDataSource.getAllCharactersURL)\(CharacterDataSource.getPage)\(page)"
         
