@@ -48,7 +48,7 @@ struct CharacterListView: View {
                 
                 ForEach(viewModel.characters) { character in
                     
-                    CharacterCellView(id: character.id, race: character.race ?? "", name: character.name , image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")
+                    CharacterCellView(id: character.id, race: character.getRace(), name: character.name , image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")
                 }
                 
             }
