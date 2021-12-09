@@ -18,14 +18,15 @@ struct ProgressViewView: View {
             ProgressViewLottieImplementation(name: "progressViewLottieJson", loopMode: .loop)
                         .frame(width: 100, height: 100)
 
-            
             Spacer()
         }
     }
 }
 
 struct ProgressViewView_Previews: PreviewProvider {
+    
     static var previews: some View {
+        
         ProgressViewView()
     }
 }
