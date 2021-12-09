@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct ServerCharacterResponse: Codable {
-
+    
     let _id: String
     let height: String?
     let race: String?
@@ -18,8 +19,9 @@ struct ServerCharacterResponse: Codable {
     let death: String?
     let realm: String?
     let hair: String?
-    let name: String
-    let wikiURL: String
+    let name: String?
+    let wikiURL: String?
+    
     func convertToEntity() -> Character {
         
         return Character(id: _id,
@@ -31,10 +33,8 @@ struct ServerCharacterResponse: Codable {
                          death: death ?? "",
                          realm: realm ?? "",
                          hair: hair ?? "",
-                         name: name,
-                         wikiURL: wikiURL)
-        
-        
+                         name: name ?? "",
+                         wikiURL: wikiURL ?? "")
     }
 }
 

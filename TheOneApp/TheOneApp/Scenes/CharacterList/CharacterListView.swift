@@ -12,12 +12,14 @@ struct CharacterListView: View {
     @StateObject var viewModel: CharacterListViewModel
     
     var body: some View {
+        
         VStack {
+            Text("-.-")
             ForEach(viewModel.characters) { character in
+                
                 VStack() {
                     
-                    Text(character.name)
-                    Text("Iluvatar ayudame")
+                    Text(character.name ?? "")
                 }
                 .onAppear {
                     
@@ -31,9 +33,9 @@ struct CharacterListView: View {
             
         }
         .onAppear {
-            
+
             if viewModel.characters.isEmpty {
-                
+
                 viewModel.getAllCharacters(page: 1)
             }
         }
