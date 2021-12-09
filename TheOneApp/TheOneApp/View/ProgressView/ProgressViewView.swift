@@ -15,8 +15,9 @@ struct ProgressViewView: View {
             
             Spacer()
             
-            ProgressViewLottie(name: "progressViewLottieJson", loopMode: .loop)
-                        .frame(width: 100, height: 100)
+            ProgressView("Checking on the middle earth")
+                .font(.footnote)
+                .progressViewStyle(CircularProgressViewStyle(tint: Color.green))
             
             Spacer()
         }
