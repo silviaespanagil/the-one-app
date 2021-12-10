@@ -12,7 +12,7 @@ struct ServerCharacterResponse: Codable {
     
     let _id: String
     let height: String?
-    let race: String?
+    let race: String
     let gender: String?
     let birth: String?
     let spouse: String?
@@ -26,7 +26,7 @@ struct ServerCharacterResponse: Codable {
         
         return Character(id: _id,
                          height: height ?? "",
-                         race: race ?? "",
+                         race: Race(rawValue: race) ?? .NaN,
                          gender: gender ?? "",
                          birth: birth ?? "",
                          spouse: spouse ?? "",

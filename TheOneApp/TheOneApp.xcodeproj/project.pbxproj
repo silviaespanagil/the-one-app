@@ -21,6 +21,7 @@
 		A785B6B6276236B8006A50FC /* ProgressViewLottieImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6B5276236B8006A50FC /* ProgressViewLottieImplementation.swift */; };
 		A785B6B8276236EA006A50FC /* progressViewLottieJson.json in Resources */ = {isa = PBXBuildFile; fileRef = A785B6B7276236EA006A50FC /* progressViewLottieJson.json */; };
 		A785B6BB27623740006A50FC /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A785B6BA27623740006A50FC /* Lottie */; };
+		A785B6CA27637876006A50FC /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6C927637876006A50FC /* Race.swift */; };
 		A7EE930C274FF0510046488C /* ServerBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EE930B274FF0510046488C /* ServerBaseResponse.swift */; };
 		A7EE930E274FF0D10046488C /* ServerCharacterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EE930D274FF0D10046488C /* ServerCharacterResponse.swift */; };
 		A7EE9311274FF2220046488C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EE9310274FF2220046488C /* Character.swift */; };
@@ -68,6 +69,7 @@
 		A785B6A7276221FE006A50FC /* ProgressViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewView.swift; sourceTree = "<group>"; };
 		A785B6B5276236B8006A50FC /* ProgressViewLottieImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewLottieImplementation.swift; sourceTree = "<group>"; };
 		A785B6B7276236EA006A50FC /* progressViewLottieJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = progressViewLottieJson.json; sourceTree = "<group>"; };
+		A785B6C927637876006A50FC /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
 		A7EE930B274FF0510046488C /* ServerBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerBaseResponse.swift; sourceTree = "<group>"; };
 		A7EE930D274FF0D10046488C /* ServerCharacterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCharacterResponse.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A7EE9310274FF2220046488C /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		A747FAD6274FE9ED00355FE0 /* Enumerations */ = {
 			isa = PBXGroup;
 			children = (
+				A785B6C927637876006A50FC /* Race.swift */,
 				A747FAD7274FEA0900355FE0 /* HTTPError.swift */,
 			);
 			path = Enumerations;
@@ -442,6 +445,7 @@
 				A7EE93242750F0BC0046488C /* CharacterListViewModel.swift in Sources */,
 				A7EE9313274FF39B0046488C /* ServerBaseArrayResponse.swift in Sources */,
 				A7EE93262750F0CC0046488C /* CharacterListView.swift in Sources */,
+				A785B6CA27637876006A50FC /* Race.swift in Sources */,
 				A747FAD5274FE75F00355FE0 /* APIManager.swift in Sources */,
 				A785B6B6276236B8006A50FC /* ProgressViewLottieImplementation.swift in Sources */,
 				A785B6A8276221FE006A50FC /* ProgressViewView.swift in Sources */,

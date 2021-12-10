@@ -11,7 +11,7 @@ import Lottie
 struct ProgressViewLottieImplementation: UIViewRepresentable {
     
     var name: String
-    var loopMode: LottieLoopMode = .loop
+    var loopMode: LottieLoopMode = .autoReverse
     
     var animationView = AnimationView()
     
