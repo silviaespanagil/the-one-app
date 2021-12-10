@@ -12,8 +12,9 @@ import Combine
 class CharacterListViewModel: ObservableObject {
     
     private var originalCharacters: [Character] = []
-    
+
     @Published public private(set) var sortCharacters = ["Sort by", "A-Z", "Z-A"]
+    @Published public private(set) var allRaces = ["All races", "Ainur", "Balrog", "Beast or animal", "Dwarf", "Eagles", "Elf", "Ent", "God", "Hobbit", "Human", "Maiar", "Mordor creature", "Race not specified" ]
     
     @Published public private(set) var characters: [Character] = []
     
@@ -55,7 +56,6 @@ class CharacterListViewModel: ObservableObject {
         
         if selection == sortCharacters.count {
             
-            // All values
             self.characters = self.originalCharacters
             
         } else if selection == 1 {
@@ -68,4 +68,20 @@ class CharacterListViewModel: ObservableObject {
             self.characters = self.originalCharacters.sorted { $0.name > $1.name }
         }*/
     }
+    
+    func sortByRace(_ selection: String) {
+        
+        if selection == allRaces[0] {
+            
+            self.characters = self.originalCharacters
+            
+        } else {
+            
+            self.characters = self.originalCharacters.filter { character in
+                
+                character.race.description == selection
+            }
+        }
+    }
+    
 }
