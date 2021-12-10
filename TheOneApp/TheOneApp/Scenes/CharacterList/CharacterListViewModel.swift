@@ -59,7 +59,7 @@ class CharacterListViewModel: ObservableObject {
    
     func sortByRace(_ selection: String) {
         
-        if selection == allRaces[0] {
+        if selection == "All races" {
             
             self.characters = self.originalCharacters
             

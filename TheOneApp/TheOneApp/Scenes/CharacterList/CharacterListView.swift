@@ -26,26 +26,15 @@ struct CharacterListView: View {
                         
                         Picker("Filter by Race", selection: $selection) {
                             
-                            ForEach (viewModel.allRaces, id: \.self, content: { race in
+                            ForEach (Race.uniqueDescriptions, id: \.self, content: { race in
                                 
                                 Text(race)
                                     .tag(race)
                             })
-                            
                             }.onChange(of: selection) { _ in
                                 
                                 viewModel.sortByRace(selection)
                         }
-                        
-//                        TODO: Ask Xavi if there's a way to clean duplicates from here or if new way is better
-//                        Picker("Filter by Race", selection: $selection) {
-//
-//                            ForEach (Race.allCases, id: \.self, content: { race in
-//
-//                                Text(race.description)
-//                                    .tag(race.description)
-//                            })
-//                        }
                     } .padding(.trailing)
                 }
             }

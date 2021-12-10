@@ -10,11 +10,14 @@ import SwiftUI
 
 enum Race: String, CaseIterable {
     
-    case Ainur, Balrog, Dragon, Dragons, Dwarf, Dwarves, Eagle, Eagles, Elf, Elves, Ent, Ents, Goblin, God, Hobbit, Hobbits, Horse, Human, Maiar, Men, NaN, Orcs, Raven, Urúloki, Vampire, Werewolves, Wolfhound, Wraith
+    case Ainur, Balrog, Dragon, Dragons, Dwarf, Dwarves, Eagle, Eagles, Elf, Elves, Ent, Ents, Goblin, God, Hobbit, Hobbits, Horse, Human, Maiar, Men, NaN, Orcs, Raven, Urúloki, Vampire, Werewolves, Wolfhound, Wraith, AllRaces
     
     var description: String {
         
         switch self {
+            
+        case .AllRaces:
+            return "All races"
 
         case .Ainur:
             return "Ainur"
@@ -54,7 +57,17 @@ enum Race: String, CaseIterable {
             
         case .NaN:
             return "Race not specified"
-
         }
+    }
+    
+    static var uniqueDescriptions: [String] {
+        
+        var allRaces : [String] = []
+        for race in Race.allCases {
+            if !allRaces.contains(race.description) {
+                allRaces.append(race.description)
+            }
+        }
+        return allRaces
     }
 }
