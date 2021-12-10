@@ -10,8 +10,7 @@ import SwiftUI
 struct CharacterListView: View {
     
     @StateObject var viewModel: CharacterListViewModel
-    @State private var selection = 0
-    @State private var raceSelection = "All races"
+    @State private var selection = "All races"
     
     var body: some View {
         
@@ -25,22 +24,7 @@ struct CharacterListView: View {
                         
                         Spacer()
                         
-                        Picker(selection: $selection, label: Text("Sort by")) {
-                            
-                            ForEach(0 ..< viewModel.sortCharacters.count, content: { index in
-                                
-                                Text(self.viewModel.sortCharacters[index])
-                                    .tag(index)
-                            })
-                            
-                        }.onChange(of: selection) { _ in
-                            
-                            viewModel.sortByAbc(selection)
-                        }
-                        
-                        Spacer()
-                        
-                        Picker("Filter by Race", selection: $raceSelection) {
+                        Picker("Filter by Race", selection: $selection) {
                             
                             ForEach (viewModel.allRaces, id: \.self, content: { race in
                                 
@@ -48,14 +32,13 @@ struct CharacterListView: View {
                                     .tag(race)
                             })
                             
-                            }.onChange(of: raceSelection) { _ in
+                            }.onChange(of: selection) { _ in
                                 
-                                viewModel.sortByRace(raceSelection)
+                                viewModel.sortByRace(selection)
                         }
                         
-                        Spacer()
 //                        TODO: Ask Xavi if there's a way to clean duplicates from here or if new way is better
-//                        Picker("Filter by Race", selection: $raceSelection) {
+//                        Picker("Filter by Race", selection: $selection) {
 //
 //                            ForEach (Race.allCases, id: \.self, content: { race in
 //
@@ -63,7 +46,7 @@ struct CharacterListView: View {
 //                                    .tag(race.description)
 //                            })
 //                        }
-                    }
+                    } .padding(.trailing)
                 }
             }
             
