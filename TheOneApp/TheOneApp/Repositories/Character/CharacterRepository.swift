@@ -11,4 +11,6 @@ import Combine
 protocol CharacterRepository {
     
     func getAllCharacters(page: Int) -> AnyPublisher<[Character], Error>
+    
+    func getCharacterDetail(id: String) -> AnyPublisher<Character, Error>
 }
