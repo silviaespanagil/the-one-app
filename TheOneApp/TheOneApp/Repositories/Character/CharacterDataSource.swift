@@ -24,12 +24,21 @@ class CharacterDataSource {
     
     func getAllCharacters(page: Int) -> AnyPublisher<ServerBaseArrayResponse<ServerCharacterResponse>, Error> {
         
-        let apiManager = APIManager(baseURL: baseURLString,session: session)
+        let apiManager = APIManager(baseURL: baseURLString, session: session)
         
         let urlRequest = getAllCharactersEndpoint(page: page)
         
         return apiManager.performRequest(urlRequest: urlRequest)
         
+    }
+    
+    func getCharacterDetail(id: String) -> AnyPublisher<ServerCharacterResponse, Error> {
+        
+        let apiManager = APIManager(baseURL: baseURLString, session: session)
+        
+        let urlRequest = getCharacterDetailEndpoint(id: id)
+        
+        return apiManager.performRequest(urlRequest: urlRequest)
     }
 }
 
@@ -37,9 +46,20 @@ class CharacterDataSource {
 
 extension CharacterDataSource {
     
-    func getAllCharactersEndpoint(page:Int) -> URLRequest {
+    func getAllCharactersEndpoint(page: Int) -> URLRequest {
         
         let endpoint = "\(baseURLString)\(CharacterDataSource.getAllCharactersURL)\(CharacterDataSource.getPage)\(page)"
+        
+        let components = URLComponents(string: endpoint)
+        
+        let urlRequest = URLRequest(url: (components?.url!)!)
+        
+        return urlRequest
+    }
+    
+    func getCharacterDetailEndpoint(id: String) -> URLRequest {
+        
+        let endpoint = "\(baseURLString)\(CharacterDataSource.getAllCharactersURL)/\(id)"
         
         let components = URLComponents(string: endpoint)
         
