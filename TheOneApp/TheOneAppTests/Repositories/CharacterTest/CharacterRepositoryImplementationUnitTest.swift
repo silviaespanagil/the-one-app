@@ -1,14 +1,13 @@
 //
-//  TheOneAppTests.swift
+//  CharacterRepositoryImplementationUnitTest.swift
 //  TheOneAppTests
 //
-//  Created by Silvia España on 25/11/21.
+//  Created by Silvia España on 10/12/21.
 //
 
 import XCTest
-@testable import TheOneApp
 
-class TheOneAppTests: XCTestCase {
+class CharacterRepositoryImplementationUnitTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
