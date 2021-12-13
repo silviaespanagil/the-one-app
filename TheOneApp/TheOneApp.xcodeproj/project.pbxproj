@@ -25,6 +25,7 @@
 		A785B6D82763B611006A50FC /* MockCharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6D72763B611006A50FC /* MockCharacterRepository.swift */; };
 		A785B6DA2763B6B8006A50FC /* CharacterDataSourceUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6D92763B6B8006A50FC /* CharacterDataSourceUnitTest.swift */; };
 		A785B6DC2763B87E006A50FC /* CharacterRepositoryImplementationUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6DB2763B87E006A50FC /* CharacterRepositoryImplementationUnitTest.swift */; };
+		A785B6DE276759B1006A50FC /* GetCharacterDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6DD276759B1006A50FC /* GetCharacterDetailUseCase.swift */; };
 		A7EE930C274FF0510046488C /* ServerBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EE930B274FF0510046488C /* ServerBaseResponse.swift */; };
 		A7EE930E274FF0D10046488C /* ServerCharacterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EE930D274FF0D10046488C /* ServerCharacterResponse.swift */; };
 		A7EE9311274FF2220046488C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EE9310274FF2220046488C /* Character.swift */; };
@@ -76,6 +77,7 @@
 		A785B6D72763B611006A50FC /* MockCharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterRepository.swift; sourceTree = "<group>"; };
 		A785B6D92763B6B8006A50FC /* CharacterDataSourceUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataSourceUnitTest.swift; sourceTree = "<group>"; };
 		A785B6DB2763B87E006A50FC /* CharacterRepositoryImplementationUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryImplementationUnitTest.swift; sourceTree = "<group>"; };
+		A785B6DD276759B1006A50FC /* GetCharacterDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharacterDetailUseCase.swift; sourceTree = "<group>"; };
 		A7EE930B274FF0510046488C /* ServerBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerBaseResponse.swift; sourceTree = "<group>"; };
 		A7EE930D274FF0D10046488C /* ServerCharacterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCharacterResponse.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A7EE9310274FF2220046488C /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				A7EE931F2750EEFD0046488C /* GetAllCharactersUseCase.swift */,
+				A785B6DD276759B1006A50FC /* GetCharacterDetailUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				A747FAD8274FEA0900355FE0 /* HTTPError.swift in Sources */,
 				A7EE9317274FF4DA0046488C /* CharacterDataSource.swift in Sources */,
 				A7EE930E274FF0D10046488C /* ServerCharacterResponse.swift in Sources */,
+				A785B6DE276759B1006A50FC /* GetCharacterDetailUseCase.swift in Sources */,
 				A785B6A1276208BA006A50FC /* CharacterCellView.swift in Sources */,
 				A7EE93202750EEFD0046488C /* GetAllCharactersUseCase.swift in Sources */,
 				A747FAA9274FB16F00355FE0 /* TheOneAppApp.swift in Sources */,
