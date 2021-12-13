@@ -17,7 +17,6 @@ class CharacterRepositoryImplementation: CharacterRepository {
         self.dataSource = dataSource
     }
     
-    
     func getAllCharacters(page: Int) -> AnyPublisher<[Character], Error> {
         
         return dataSource.getAllCharacters(page: page).map { serverCharacter -> [Character] in
@@ -32,6 +31,18 @@ class CharacterRepositoryImplementation: CharacterRepository {
             }
             
             return characters
+        }
+        .mapError({ $0 })
+        .eraseToAnyPublisher()
+    }
+    
+    func getCharacterDetail(id: String) -> AnyPublisher<Character, Error> {
+        
+        return dataSource.getCharacterDetail(id: id).map { serverCharacter -> Character in
+            
+            let character = serverCharacter.convertToEntity()
+            
+            return character
         }
         .mapError({ $0 })
         .eraseToAnyPublisher()
