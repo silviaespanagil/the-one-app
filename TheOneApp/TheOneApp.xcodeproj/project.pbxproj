@@ -26,6 +26,8 @@
 		A785B6DA2763B6B8006A50FC /* CharacterDataSourceUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6D92763B6B8006A50FC /* CharacterDataSourceUnitTest.swift */; };
 		A785B6DC2763B87E006A50FC /* CharacterRepositoryImplementationUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6DB2763B87E006A50FC /* CharacterRepositoryImplementationUnitTest.swift */; };
 		A785B6DE276759B1006A50FC /* GetCharacterDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6DD276759B1006A50FC /* GetCharacterDetailUseCase.swift */; };
+		A785B6E127676A9D006A50FC /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6E027676A9D006A50FC /* CharacterDetailViewModel.swift */; };
+		A785B6E327676AAE006A50FC /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6E227676AAE006A50FC /* CharacterDetailView.swift */; };
 		A7EE930C274FF0510046488C /* ServerBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EE930B274FF0510046488C /* ServerBaseResponse.swift */; };
 		A7EE930E274FF0D10046488C /* ServerCharacterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EE930D274FF0D10046488C /* ServerCharacterResponse.swift */; };
 		A7EE9311274FF2220046488C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EE9310274FF2220046488C /* Character.swift */; };
@@ -78,6 +80,8 @@
 		A785B6D92763B6B8006A50FC /* CharacterDataSourceUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataSourceUnitTest.swift; sourceTree = "<group>"; };
 		A785B6DB2763B87E006A50FC /* CharacterRepositoryImplementationUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryImplementationUnitTest.swift; sourceTree = "<group>"; };
 		A785B6DD276759B1006A50FC /* GetCharacterDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharacterDetailUseCase.swift; sourceTree = "<group>"; };
+		A785B6E027676A9D006A50FC /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
+		A785B6E227676AAE006A50FC /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		A7EE930B274FF0510046488C /* ServerBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerBaseResponse.swift; sourceTree = "<group>"; };
 		A7EE930D274FF0D10046488C /* ServerCharacterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCharacterResponse.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A7EE9310274FF2220046488C /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -260,6 +264,15 @@
 			path = CharacterTest;
 			sourceTree = "<group>";
 		};
+		A785B6DF27676A85006A50FC /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A785B6E027676A9D006A50FC /* CharacterDetailViewModel.swift */,
+				A785B6E227676AAE006A50FC /* CharacterDetailView.swift */,
+			);
+			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
 		A7EE9307274FEFD50046488C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +330,7 @@
 		A7EE93212750F0960046488C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A785B6DF27676A85006A50FC /* CharacterDetail */,
 				A785B69F27620843006A50FC /* ListCellViews */,
 				A785B69E276204FF006A50FC /* TabBar */,
 				A7EE93222750F09C0046488C /* CharacterList */,
@@ -470,6 +484,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A785B6E127676A9D006A50FC /* CharacterDetailViewModel.swift in Sources */,
+				A785B6E327676AAE006A50FC /* CharacterDetailView.swift in Sources */,
 				A7EE93242750F0BC0046488C /* CharacterListViewModel.swift in Sources */,
 				A7EE9313274FF39B0046488C /* ServerBaseArrayResponse.swift in Sources */,
 				A7EE93262750F0CC0046488C /* CharacterListView.swift in Sources */,
