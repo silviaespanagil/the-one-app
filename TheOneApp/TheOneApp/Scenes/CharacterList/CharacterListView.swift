@@ -14,6 +14,8 @@ struct CharacterListView: View {
     
     var body: some View {
         
+        NavigationView {
+        
         VStack {
             
             if !viewModel.showProgressView {
@@ -40,7 +42,7 @@ struct CharacterListView: View {
             }
             
             List {
-                
+            
                 if viewModel.showProgressView {
                     
                     ProgressViewView()
@@ -48,7 +50,9 @@ struct CharacterListView: View {
                 
                 ForEach(viewModel.characters) { character in
                     
-                    CharacterCellView(id: character.id, race: character.getRace(), name: character.name , image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")
+                    NavigationLink(destination: CharacterDetailView(viewModel: CharacterDetailViewModel(character: character))) {
+                    
+                    CharacterCellView(id: character.id, race: character.getRace(), name: character.name , image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")}
                 }
                 
             }
@@ -62,6 +66,8 @@ struct CharacterListView: View {
             }
         }
     }
+}
+    
 }
 
 struct CharacterListView_Previews: PreviewProvider {
