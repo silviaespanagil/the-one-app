@@ -11,7 +11,7 @@ struct Character: Identifiable, Equatable {
     
     let id: String
     let height: String?
-    let race: Race
+    let race: Race?
     let gender: String?
     let birth: String?
     let spouse: String?
@@ -23,7 +23,7 @@ struct Character: Identifiable, Equatable {
     
     func getRace() -> String {
         
-        return race.description
+        return race?.description ?? ""
     }
 
 }
