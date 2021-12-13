@@ -28,6 +28,7 @@ class CharacterListViewModel: ObservableObject {
     func sortCharacters() {
         
         characters = originalCharacters.sorted { $0.name < $1.name }
+        originalCharacters = characters
     }
     
     func getAllCharacters(page: Int) {
@@ -59,7 +60,7 @@ class CharacterListViewModel: ObservableObject {
    
     func sortByRace(_ selection: String) {
         
-        if selection == "All races" {
+        if selection == Race.AllRaces.description {
             
             self.characters = self.originalCharacters
             
@@ -67,7 +68,7 @@ class CharacterListViewModel: ObservableObject {
             
             self.characters = self.originalCharacters.filter { character in
                 
-                character.race.description == selection
+                character.race!.description == selection
             }
             
         }
