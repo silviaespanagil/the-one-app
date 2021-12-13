@@ -9,5 +9,5 @@ import Foundation
 
 struct ServerBaseResponse<T: Codable>: Codable {
     
-    let results: T
+    let docs: T
 }
