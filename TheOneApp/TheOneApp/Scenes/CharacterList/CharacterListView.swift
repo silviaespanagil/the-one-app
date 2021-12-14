@@ -44,14 +44,16 @@ struct CharacterListView: View {
                 if viewModel.showProgressView {
                     
                     ProgressViewView()
+                        .listRowBackground(Color("AppSalmon"))
                 }
                 
                 ForEach(viewModel.characters) { character in
                     
                     NavigationLink(destination: CharacterDetailView(viewModel: CharacterDetailViewModel(character: character))) {
                         
-                        CharacterCellView(id: character.id, race: character.getRace(), name: character.name , image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")}
-                }
+                        CharacterCellView(id: character.id, race: character.getRace(), name: character.name , image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")
+                    }
+                }.listRowBackground(Color("AppSalmon"))
             }
         }
         .onAppear {
@@ -60,7 +62,7 @@ struct CharacterListView: View {
                 
                 viewModel.getAllCharacters(page: 1)
             }
-        }
+        }.background(Color("AppDarkGreen").ignoresSafeArea())
     }
 }
 

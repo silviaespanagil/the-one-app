@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7274F582768C9E400647411 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7274F572768C9E400647411 /* Colors.xcassets */; };
 		A747FAA9274FB16F00355FE0 /* TheOneAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747FAA8274FB16F00355FE0 /* TheOneAppApp.swift */; };
 		A747FAAD274FB17000355FE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A747FAAC274FB17000355FE0 /* Assets.xcassets */; };
 		A747FAB0274FB17000355FE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A747FAAF274FB17000355FE0 /* Preview Assets.xcassets */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7274F572768C9E400647411 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A747FAA5274FB16F00355FE0 /* TheOneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheOneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A747FAA8274FB16F00355FE0 /* TheOneAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheOneAppApp.swift; sourceTree = "<group>"; };
 		A747FAAC274FB17000355FE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		A747FA9C274FB16F00355FE0 = {
 			isa = PBXGroup;
 			children = (
+				A7274F572768C9E400647411 /* Colors.xcassets */,
 				A747FAA7274FB16F00355FE0 /* TheOneApp */,
 				A747FAB8274FB17000355FE0 /* TheOneAppTests */,
 				A747FAC2274FB17000355FE0 /* TheOneAppUITests */,
@@ -212,13 +215,6 @@
 				A747FAD7274FEA0900355FE0 /* HTTPError.swift */,
 			);
 			path = Enumerations;
-			sourceTree = "<group>";
-		};
-		A785B69E276204FF006A50FC /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TabBar;
 			sourceTree = "<group>";
 		};
 		A785B69F27620843006A50FC /* ListCellViews */ = {
@@ -363,7 +359,6 @@
 				A785B6F727688A23006A50FC /* Main */,
 				A785B6DF27676A85006A50FC /* CharacterDetail */,
 				A785B69F27620843006A50FC /* ListCellViews */,
-				A785B69E276204FF006A50FC /* TabBar */,
 				A7EE93222750F09C0046488C /* CharacterList */,
 			);
 			path = Scenes;
@@ -491,6 +486,7 @@
 				A747FAB0274FB17000355FE0 /* Preview Assets.xcassets in Resources */,
 				A785B6EF2767B6AB006A50FC /* LaunchScreen.storyboard in Resources */,
 				A785B6F62767B7E2006A50FC /* LaunchScreen-logo.png in Resources */,
+				A7274F582768C9E400647411 /* Colors.xcassets in Resources */,
 				A747FAAD274FB17000355FE0 /* Assets.xcassets in Resources */,
 				A785B6B8276236EA006A50FC /* progressViewLottieJson.json in Resources */,
 			);

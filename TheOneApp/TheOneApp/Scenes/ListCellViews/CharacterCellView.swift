@@ -31,7 +31,6 @@ struct CharacterCellView: View {
                 .frame(width: 50, height: 50)
                 .padding()
                 .clipShape(RoundedRectangle(cornerRadius: 50))
-                .shadow(color: Color.gray, radius: 2, x: 0, y: 2)
             
             VStack {
                 
@@ -41,7 +40,8 @@ struct CharacterCellView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .font(.footnote)
             }
-        }.padding()
+        }
+        .padding()
     }
 }
 
