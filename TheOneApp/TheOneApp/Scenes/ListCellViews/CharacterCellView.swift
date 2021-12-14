@@ -21,6 +21,7 @@ struct CharacterCellView: View {
         self.name = name
         self.image = image
     }
+    
     var body: some View {
         
         HStack {
