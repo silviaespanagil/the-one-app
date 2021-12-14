@@ -8,14 +8,14 @@
 import SwiftUI
 import Lottie
 
-struct ProgressViewLottieImplementation: UIViewRepresentable {
+struct LoadingAnimationViewLottieImplementation: UIViewRepresentable {
     
     var name: String
     var loopMode: LottieLoopMode = .autoReverse
     
     var animationView = AnimationView()
     
-    func makeUIView(context: UIViewRepresentableContext<ProgressViewLottieImplementation>) -> UIView {
+    func makeUIView(context: UIViewRepresentableContext<LoadingAnimationViewLottieImplementation>) -> UIView {
         
         let view = UIView(frame: .zero)
         
@@ -35,5 +35,5 @@ struct ProgressViewLottieImplementation: UIViewRepresentable {
         return view
     }
     
-    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<ProgressViewLottieImplementation>) {}
+    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<LoadingAnimationViewLottieImplementation>) {}
 }

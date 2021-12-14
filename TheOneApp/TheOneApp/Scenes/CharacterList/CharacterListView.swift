@@ -43,7 +43,7 @@ struct CharacterListView: View {
                 
                 if viewModel.showProgressView {
                     
-                    ProgressViewView()
+                    LoadingAnimationView()
                         .listRowBackground(Color("AppSalmon"))
                 }
                 
