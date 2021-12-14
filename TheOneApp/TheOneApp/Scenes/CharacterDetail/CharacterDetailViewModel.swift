@@ -13,6 +13,14 @@ class CharacterDetailViewModel: ObservableObject {
     
     @Published public private(set) var character: Character
     @Published public private(set) var showProgressView = false
+    
+    let born: String
+    let death: String
+    let partner: String
+    let moreInfo: String
+    let unknownRace: String
+    
+    let cornerRadius: CGFloat = 50
 
     private var cancellable: AnyCancellable?
     
@@ -21,6 +29,11 @@ class CharacterDetailViewModel: ObservableObject {
     init(character: Character) {
         
         self.character = character
+        born = "Born in"
+        death = "Registered death"
+        partner = "Got married with"
+        moreInfo = "Want to know more about "
+        unknownRace = "Unknown race"
     }
     
     func getCharacterDetail() {
