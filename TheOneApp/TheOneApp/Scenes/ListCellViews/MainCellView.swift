@@ -26,7 +26,7 @@ struct MainCellView: View {
                 .tracking(5)
                 .textCase(.uppercase)
                 .frame(maxWidth: .infinity)
-                .foregroundColor(Color.white)
+                .foregroundColor(Color("AppWhite"))
         }
     }
 }

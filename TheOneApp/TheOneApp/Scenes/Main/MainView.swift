@@ -24,36 +24,36 @@ struct MainView: View {
                         MainCellView(name: viewModel.mainTitles[0])
                     } .listRowBackground(Image("")
                                             .renderImage(url: URL(string: viewModel.mainImages[0])!)
-                                            .overlay(Color("launchScreen-background").opacity(0.5)))
+                                            .overlay(Color("AppDarkGreen").opacity(0.5)))
                     
                     NavigationLink(destination: MainView(viewModel: MainViewModel())) {
 
                         MainCellView(name: viewModel.mainTitles[1])
                     } .listRowBackground(Image("")
                                             .renderImage(url: URL(string: viewModel.mainImages[1])!)
-                                            .overlay(Color("launchScreen-background").opacity(0.5)))
+                                            .overlay(Color("AppDarkGreen").opacity(0.5)))
                     
                     NavigationLink(destination: MainView(viewModel: MainViewModel())) {
 
                         MainCellView(name: viewModel.mainTitles[2])
                     } .listRowBackground(Image("")
                                             .renderImage(url: URL(string: viewModel.mainImages[2])!)
-                                            .overlay(Color("launchScreen-background").opacity(0.5)))
+                                            .overlay(Color("AppDarkGreen").opacity(0.5)))
                     
                     NavigationLink(destination: MainView(viewModel: MainViewModel())) {
 
                         MainCellView(name: viewModel.mainTitles[3])
                     } .listRowBackground(Image("")
                                             .renderImage(url: URL(string: viewModel.mainImages[3])!)
-                                            .overlay(Color("launchScreen-background").opacity(0.5)))
+                                            .overlay(Color("AppDarkGreen").opacity(0.5)))
                 }
-                .background(Color("launchScreen-background").ignoresSafeArea())
+                .background(Color("AppDarkGreen").ignoresSafeArea())
                 .onAppear {
 
                     UITableView.appearance().backgroundColor = .clear
                 }.environment(\.defaultMinListRowHeight, listHeight.size.height * 0.22)
             }
-        }
+        }.accentColor(Color("AppSalmon"))
     }
 }
 
