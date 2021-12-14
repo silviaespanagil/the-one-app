@@ -14,8 +14,6 @@ struct CharacterListView: View {
     
     var body: some View {
         
-        NavigationView {
-        
         VStack {
             
             if !viewModel.showProgressView {
@@ -33,16 +31,16 @@ struct CharacterListView: View {
                                 Text(race)
                                     .tag(race)
                             })
-                            }.onChange(of: selection) { _ in
-                                
-                                viewModel.sortByRace(selection)
+                        }.onChange(of: selection) { _ in
+                            
+                            viewModel.sortByRace(selection)
                         }
                     } .padding(.trailing)
                 }
             }
             
             List {
-            
+                
                 if viewModel.showProgressView {
                     
                     ProgressViewView()
@@ -51,12 +49,10 @@ struct CharacterListView: View {
                 ForEach(viewModel.characters) { character in
                     
                     NavigationLink(destination: CharacterDetailView(viewModel: CharacterDetailViewModel(character: character))) {
-                    
-                    CharacterCellView(id: character.id, race: character.getRace(), name: character.name , image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")}
+                        
+                        CharacterCellView(id: character.id, race: character.getRace(), name: character.name , image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")}
                 }
-                
             }
-            
         }
         .onAppear {
             
@@ -66,8 +62,6 @@ struct CharacterListView: View {
             }
         }
     }
-}
-    
 }
 
 struct CharacterListView_Previews: PreviewProvider {
