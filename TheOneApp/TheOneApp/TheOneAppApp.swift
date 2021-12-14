@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TheOneAppApp: App {
+    
     var body: some Scene {
+        
         WindowGroup {
-            CharacterListView(viewModel: CharacterListViewModel())
+            
+            MainView(viewModel: MainViewModel())
         }
     }
 }
