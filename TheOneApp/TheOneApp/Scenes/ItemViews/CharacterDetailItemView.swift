@@ -20,8 +20,8 @@ struct CharacterDetailItemView: View {
     
     var body: some View {
         
-        if (value != nil) {
-        
+        if let value = value, !value.isEmpty {
+            
             HStack {
                 
                 Text(title)
@@ -31,9 +31,10 @@ struct CharacterDetailItemView: View {
                 
                 VStack {
                     
-                    Text(value ?? "")
+                    Text(value)
                 }
             }.padding(EdgeInsets(top: 0, leading: 15, bottom: 15, trailing: 15))
+                .foregroundColor(Color("AppDarkGreen"))
         }
     }
 }
