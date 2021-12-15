@@ -12,8 +12,6 @@ import Combine
 class CharacterListViewModel: ObservableObject {
     
     private var originalCharacters: [Character] = []
-
-    @Published public private(set) var allRaces = ["All races", "Ainur", "Balrog", "Beast or animal", "Dwarf", "Eagles", "Elf", "Ent", "God", "Hobbit", "Human", "Maiar", "Mordor creature", "Race not specified" ]
     
     @Published public private(set) var characters: [Character] = []
     
@@ -52,12 +50,12 @@ class CharacterListViewModel: ObservableObject {
                 
             }, receiveValue: { (characters: [Character] ) in
                 
-                self.originalCharacters.append(contentsOf: characters)
                 self.characters.append(contentsOf: characters)
+                self.originalCharacters.append(contentsOf: self.characters)
                 self.sortCharacters()
             })
     }
-   
+    
     func sortByRace(_ selection: String) {
         
         if selection == Race.AllRaces.description {
@@ -70,8 +68,6 @@ class CharacterListViewModel: ObservableObject {
                 
                 character.race!.description == selection
             }
-            
         }
     }
-    
 }
