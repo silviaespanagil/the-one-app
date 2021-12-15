@@ -42,7 +42,7 @@ struct CharacterDetailView: View {
                                 
                                 CharacterDetailItemView(title: viewModel.partner, value: viewModel.character.spouse)
                                 
-                                if (viewModel.character.wikiURL != nil) {
+                                if let wikiURL = viewModel.character.wikiURL, !wikiURL.isEmpty {
                                     HStack {
                                         
                                         Text("\(viewModel.moreInfo) \(viewModel.character.name)?")
@@ -51,8 +51,9 @@ struct CharacterDetailView: View {
                                         Spacer()
                                         
                                         VStack {
-                                            Text("Link here")
-                                            //                                            Link("See the wiki", destination: URL(string: viewModel.character.wikiURL ?? "") ?? "")
+
+                                            Link("See the wiki", destination: URL(string: wikiURL)!)
+                                                .foregroundColor(Color("AppDarkGreen"))
                                         }
                                     }.padding(EdgeInsets(top: 0, leading: 15, bottom: 15, trailing: 15))
                                 }
@@ -81,7 +82,8 @@ struct CharacterDetailView_Previews: PreviewProvider {
                                   realm: "Reunited Kingdom",
                                   hair: "Black",
                                   name: "Arwen",
-                                  wikiURL: "")
+                                  wikiURL: "",
+                                  imageRace: "")
         
         CharacterDetailView(viewModel: CharacterDetailViewModel(character: character))
     }
