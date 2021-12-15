@@ -28,25 +28,27 @@ struct CharacterCellView: View {
             
             Image("")
                 .renderImage(url: URL(string: image)!)
-                .frame(width: 50, height: 50)
+                .frame(width: 100, height: 100)
+                .clipShape(RoundedRectangle(cornerRadius: 25))
+                .shadow(color: .gray, radius: 3, x: 0, y: 3)
                 .padding()
-                .clipShape(RoundedRectangle(cornerRadius: 50))
-            
+                
             VStack {
                 
                 Text(name)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.title2)
+                    .padding(.bottom, 10)
                 Text(race ?? "")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .font(.footnote)
             }
         }
-        .padding()
     }
 }
 
 struct CharacterCellView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterCellView(id: "id", race: "Men", name: "Aragorn II, Elessar", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")
+        CharacterCellView(id: "id", race: "Men", name: "Aragorn II, Elessar", image: "https://pbs.twimg.com/profile_images/378800000054269606/3dd75f69faf233c299b7428a1c0ea811.jpeg")
     }
 }

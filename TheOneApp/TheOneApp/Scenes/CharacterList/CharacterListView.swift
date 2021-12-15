@@ -43,7 +43,7 @@ struct CharacterListView: View {
                 
                 if viewModel.showProgressView {
                     
-                    ProgressViewView()
+                    LoadingAnimationView()
                         .listRowBackground(Color("AppSalmon"))
                 }
                 
@@ -51,7 +51,7 @@ struct CharacterListView: View {
                     
                     NavigationLink(destination: CharacterDetailView(viewModel: CharacterDetailViewModel(character: character))) {
                         
-                        CharacterCellView(id: character.id, race: character.getRace(), name: character.name , image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/1862px-Blason_Gondor.svg.png")
+                        CharacterCellView(id: character.id, race: character.getRace(), name: character.name , image: character.imageRace)
                     }
                 }.listRowBackground(Color("AppSalmon"))
             }

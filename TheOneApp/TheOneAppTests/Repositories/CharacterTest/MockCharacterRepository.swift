@@ -14,20 +14,20 @@ class MockCharacterRepository: CharacterRepository {
 
     var isGetAllCharactersCalled = false
     var isCharacterDetailCalled = true
-    
+
     func getAllCharacters(page: Int) -> AnyPublisher<[Character], Error> {
-        
+
         self.isGetAllCharactersCalled = true
-        
+
         return Just([])
             .setFailureType(to: Error.self)
             .eraseToAnyPublisher()
     }
-    
+
     func getCharacterDetail(id: String) -> AnyPublisher<Character, Error> {
-        
+
         self.isCharacterDetailCalled = true
-        
+
         return Just(Character(id: "5cd99d4bde30eff6ebccfc07",
                               height: "",
                               race: nil,
@@ -38,12 +38,13 @@ class MockCharacterRepository: CharacterRepository {
                               realm: "",
                               hair: "",
                               name: "Luthien",
-                              wikiURL: ""))
-        
+                              wikiURL: "",
+                              imageRace: ""))
+
             .setFailureType(to: Error.self)
             .eraseToAnyPublisher()
-    
+
     }
-    
+
 }
 

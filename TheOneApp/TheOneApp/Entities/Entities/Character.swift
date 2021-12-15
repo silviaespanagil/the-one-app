@@ -20,6 +20,7 @@ struct Character: Identifiable, Equatable {
     let hair: String?
     let name: String
     let wikiURL: String?
+    var imageRace: String
     
     func getRace() -> String {
         
