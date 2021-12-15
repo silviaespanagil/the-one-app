@@ -39,4 +39,18 @@ class CharacterDataSourceUnitTest: XCTestCase {
         XCTAssertNotNil(response)
         XCTAssertEqual(response.url?.absoluteString.split(separator: "?").first, "http://jsonplaceholder.typicode.com/\(character)")
     }
+    
+    func testGetCharacterDetailEndpoint() {
+        
+        // Given
+        let character = "character/"
+        let id = "5cdbdecb6dc0baeae48cfaa6"
+        
+        // When
+        let response = sut!.getCharacterDetailEndpoint(id: id)
+        
+        // Then
+        XCTAssertNotNil(response)
+        XCTAssertEqual(response.url?.absoluteString.split(separator: "?").first, "http://jsonplaceholder.typicode.com/\(character)\(id)")
+    }
 }
