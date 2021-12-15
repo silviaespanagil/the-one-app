@@ -16,7 +16,7 @@ struct LoadingAnimationView: View {
             Spacer()
             
             LoadingAnimationViewLottieImplementation(name: "loadingAnimationLottieJson", loopMode: .loop)
-                .frame(width: 100, height: 100)
+                .frame(width: 150, height: 150)
             
             Spacer()
         }

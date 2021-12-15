@@ -11,7 +11,7 @@ import Lottie
 struct LoadingAnimationViewLottieImplementation: UIViewRepresentable {
     
     var name: String
-    var loopMode: LottieLoopMode = .autoReverse
+    var loopMode: LottieLoopMode = .playOnce
     
     var animationView = AnimationView()
     

@@ -25,21 +25,21 @@ struct CharacterDetailView: View {
                             
                             VStack {
                                 
-                            Image("")
-                                .renderImage(url: URL(string: viewModel.character.imageRace)!)
-                                .frame(width: 200, height: 200)
-                                .clipShape(RoundedRectangle(cornerRadius: 25))
-                                .shadow(color:Color("AppMediumGreen"), radius: 3, x: 0, y: 3)
-                                .padding()
-                            
-                            Text(viewModel.character.name)
-                                .foregroundColor(Color("AppWhite"))
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                                .tracking(5)
-                                .textCase(.uppercase)
+                                Image("")
+                                    .renderImage(url: URL(string: viewModel.character.imageRace)!)
+                                    .frame(width: 200, height: 200)
+                                    .clipShape(RoundedRectangle(cornerRadius: viewModel.cornerRadius))
+                                    .shadow(color:Color("AppMediumGreen"), radius: 3, x: 0, y: 3)
+                                    .padding()
+                                
+                                Text(viewModel.character.name)
+                                    .foregroundColor(Color("AppWhite"))
+                                    .font(.largeTitle)
+                                    .fontWeight(.bold)
+                                    .tracking(5)
+                                    .textCase(.uppercase)
                             }
-                                .frame(height: detailGeo.size.height * 0.40, alignment: .bottom)
+                            .frame(height: detailGeo.size.height * 0.40, alignment: .bottom)
                             
                             VStack {
                                 
@@ -62,16 +62,16 @@ struct CharacterDetailView: View {
                                         Spacer()
                                         
                                         VStack {
-
+                                            
                                             Link("See the wiki", destination: URL(string: wikiURL)!)
                                                 .foregroundColor(Color("AppDarkGreen"))
                                         }
-                                    }.padding(EdgeInsets(top: 0, leading: 15, bottom: 15, trailing: 15))
+                                    }.padding(EdgeInsets(top: 0, leading: viewModel.paddingSize, bottom: viewModel.paddingSize, trailing: viewModel.paddingSize))
                                 }
                             }
                             .frame(width: detailGeo.size.width * 1, height: detailGeo.size.height * 0.7, alignment: .top)
                             .background(Color("AppSalmon")).ignoresSafeArea()
-                            .clipShape(RoundedRectangle(cornerRadius: 25))
+                            .clipShape(RoundedRectangle(cornerRadius: viewModel.cornerRadius))
                         }
                     )
             }
