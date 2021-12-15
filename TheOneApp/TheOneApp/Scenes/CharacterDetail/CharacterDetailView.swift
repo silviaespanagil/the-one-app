@@ -23,17 +23,28 @@ struct CharacterDetailView: View {
                         
                         VStack {
                             
+                            VStack {
+                                
+                            Image("")
+                                .renderImage(url: URL(string: viewModel.character.imageRace)!)
+                                .frame(width: 200, height: 200)
+                                .clipShape(RoundedRectangle(cornerRadius: 25))
+                                .shadow(color:Color("AppMediumGreen"), radius: 3, x: 0, y: 3)
+                                .padding()
+                            
                             Text(viewModel.character.name)
                                 .foregroundColor(Color("AppWhite"))
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
                                 .tracking(5)
                                 .textCase(.uppercase)
+                            }
                                 .frame(height: detailGeo.size.height * 0.40, alignment: .bottom)
                             
                             VStack {
                                 
                                 Text(viewModel.character.race?.description ?? viewModel.unknownRace)
+                                    .foregroundColor(Color("AppDarkGreen"))
                                     .padding()
                                 
                                 CharacterDetailItemView(title: viewModel.born, value: viewModel.character.birth)
@@ -83,7 +94,7 @@ struct CharacterDetailView_Previews: PreviewProvider {
                                   hair: "Black",
                                   name: "Arwen",
                                   wikiURL: "",
-                                  imageRace: "")
+                                  imageRace: "https://www.hobbitontours.com/media/1518/hobbiton_nov-2019-sjp-346.jpg?anchor=center&mode=crop&width=1272&height=716&rnd=132732401780000000")
         
         CharacterDetailView(viewModel: CharacterDetailViewModel(character: character))
     }

@@ -73,7 +73,7 @@ struct ServerCharacterResponse: Codable {
             return "https://cdn-img.fimfiction.net/user/7h5f-1431834832-213058-256"
         } else if race == Race.Hobbit.rawValue || race == Race.Hobbits.rawValue {
             
-            return "https://a.wattpad.com/useravatar/agopalk.256.610851.jpg"
+            return "https://disforge.com/assets/icons/814884027102265415.png?t=40732a1480bfa340f3b29a3e0ccf84eb"
         } else if race == Race.Human.rawValue || race == Race.Men.rawValue {
             
             return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlQBUy_zJLmnctr_Dbb0sQJeuqbed-b8LRBQ&usqp=CAU"
