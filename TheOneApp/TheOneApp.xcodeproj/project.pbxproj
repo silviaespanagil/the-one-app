@@ -32,6 +32,8 @@
 		A777F032276B54BF001D63EC /* MockMovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F031276B54BF001D63EC /* MockMovieRepository.swift */; };
 		A777F034276B5633001D63EC /* MovieDataSourceUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F033276B5633001D63EC /* MovieDataSourceUnitTest.swift */; };
 		A777F036276B66CC001D63EC /* MovieRepositoryImplementationUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F035276B66CC001D63EC /* MovieRepositoryImplementationUnitTest.swift */; };
+		A777F03F276B742C001D63EC /* GetAllMoviesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F03E276B742C001D63EC /* GetAllMoviesUseCase.swift */; };
+		A777F041276B7454001D63EC /* GetMovieDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F040276B7454001D63EC /* GetMovieDetailUseCase.swift */; };
 		A785B6A1276208BA006A50FC /* CharacterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6A0276208BA006A50FC /* CharacterCellView.swift */; };
 		A785B6A527620D13006A50FC /* RenderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6A427620D13006A50FC /* RenderImage.swift */; };
 		A785B6BB27623740006A50FC /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A785B6BA27623740006A50FC /* Lottie */; };
@@ -107,6 +109,8 @@
 		A777F031276B54BF001D63EC /* MockMovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMovieRepository.swift; sourceTree = "<group>"; };
 		A777F033276B5633001D63EC /* MovieDataSourceUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataSourceUnitTest.swift; sourceTree = "<group>"; };
 		A777F035276B66CC001D63EC /* MovieRepositoryImplementationUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepositoryImplementationUnitTest.swift; sourceTree = "<group>"; };
+		A777F03E276B742C001D63EC /* GetAllMoviesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMoviesUseCase.swift; sourceTree = "<group>"; };
+		A777F040276B7454001D63EC /* GetMovieDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieDetailUseCase.swift; sourceTree = "<group>"; };
 		A785B6A0276208BA006A50FC /* CharacterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellView.swift; sourceTree = "<group>"; };
 		A785B6A427620D13006A50FC /* RenderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderImage.swift; sourceTree = "<group>"; };
 		A785B6C927637876006A50FC /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
@@ -329,6 +333,15 @@
 			path = Characters;
 			sourceTree = "<group>";
 		};
+		A777F03D276B7408001D63EC /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				A777F03E276B742C001D63EC /* GetAllMoviesUseCase.swift */,
+				A777F040276B7454001D63EC /* GetMovieDetailUseCase.swift */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
 		A785B69F27620843006A50FC /* ListCellViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +466,7 @@
 		A7EE931E2750EEDD0046488C /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				A777F03D276B7408001D63EC /* Movies */,
 				A777F037276B722C001D63EC /* Characters */,
 			);
 			path = UseCases;
@@ -624,10 +638,12 @@
 				A7EE93242750F0BC0046488C /* CharacterListViewModel.swift in Sources */,
 				A7EE9313274FF39B0046488C /* ServerBaseArrayResponse.swift in Sources */,
 				A7EE93262750F0CC0046488C /* CharacterListView.swift in Sources */,
+				A777F041276B7454001D63EC /* GetMovieDetailUseCase.swift in Sources */,
 				A777F027276A5101001D63EC /* MovieDataSource.swift in Sources */,
 				A785B6FE2768A7EB006A50FC /* MainViewModel.swift in Sources */,
 				A777F0132769086D001D63EC /* LoadingAnimationView.swift in Sources */,
 				A777F029276B30E0001D63EC /* MovieRepository.swift in Sources */,
+				A777F03F276B742C001D63EC /* GetAllMoviesUseCase.swift in Sources */,
 				A785B6CA27637876006A50FC /* Race.swift in Sources */,
 				A747FAD5274FE75F00355FE0 /* APIManager.swift in Sources */,
 				A777F0142769086D001D63EC /* LoadingAnimationViewLottieImplementation.swift in Sources */,
