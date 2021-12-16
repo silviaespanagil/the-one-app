@@ -320,6 +320,15 @@
 			path = MovieTest;
 			sourceTree = "<group>";
 		};
+		A777F037276B722C001D63EC /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				A7EE931F2750EEFD0046488C /* GetAllCharactersUseCase.swift */,
+				A785B6DD276759B1006A50FC /* GetCharacterDetailUseCase.swift */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
 		A785B69F27620843006A50FC /* ListCellViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,8 +453,7 @@
 		A7EE931E2750EEDD0046488C /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				A7EE931F2750EEFD0046488C /* GetAllCharactersUseCase.swift */,
-				A785B6DD276759B1006A50FC /* GetCharacterDetailUseCase.swift */,
+				A777F037276B722C001D63EC /* Characters */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
