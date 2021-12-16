@@ -15,14 +15,12 @@ class CharacterDataSourceUnitTest: XCTestCase {
     override func setUpWithError() throws {
         
         try super.setUpWithError()
-        
         sut = CharacterDataSource(baseURL: "http://jsonplaceholder.typicode.com/")
     }
     
     override func tearDownWithError() throws {
         
         sut = nil
-        
         try super.tearDownWithError()
     }
     
