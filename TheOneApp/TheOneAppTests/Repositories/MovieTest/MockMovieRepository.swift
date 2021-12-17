@@ -34,7 +34,9 @@ class MockMovieRepository: MovieRepository {
                           revenue: 2917,
                           oscarNominations: 30,
                           oscarWins: 17,
-                          rottenTomatoesScore: 94))
+                          rottenTomatoesScore: 94,
+                          movieImage: "",
+                          releaseDate: 0))
             
             .setFailureType(to: Error.self)
             .eraseToAnyPublisher()

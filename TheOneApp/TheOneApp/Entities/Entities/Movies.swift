@@ -13,8 +13,10 @@ struct Movie: Identifiable, Equatable {
     let name: String
     let runtime: Int
     let budget: Int
-    let revenue: Int
+    let revenue: Double
     let oscarNominations: Int
     let oscarWins: Int
-    let rottenTomatoesScore: Int
+    let rottenTomatoesScore: Double
+    let movieImage: String
+    let releaseDate: Int
 }
