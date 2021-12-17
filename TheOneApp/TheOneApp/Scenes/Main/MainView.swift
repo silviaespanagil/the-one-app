@@ -22,30 +22,22 @@ struct MainView: View {
                     NavigationLink(destination: CharacterListView(viewModel: CharacterListViewModel())) {
 
                         MainCellView(name: viewModel.mainTitles[0])
-                    } .listRowBackground(Image("")
-                                            .renderImage(url: URL(string: viewModel.mainImages[0])!)
-                                            .overlay(Color("AppDarkGreen").opacity(0.5)))
+                    } .listRowBackground(ImageItemView(image: viewModel.mainImages[0]))
                     
-                    NavigationLink(destination: MainView(viewModel: MainViewModel())) {
+                    NavigationLink(destination: MovieListView(viewModel: MovieListViewModel())) {
 
                         MainCellView(name: viewModel.mainTitles[1])
-                    } .listRowBackground(Image("")
-                                            .renderImage(url: URL(string: viewModel.mainImages[1])!)
-                                            .overlay(Color("AppDarkGreen").opacity(0.5)))
+                    } .listRowBackground(ImageItemView(image: viewModel.mainImages[1]))
                     
                     NavigationLink(destination: MainView(viewModel: MainViewModel())) {
 
                         MainCellView(name: viewModel.mainTitles[2])
-                    } .listRowBackground(Image("")
-                                            .renderImage(url: URL(string: viewModel.mainImages[2])!)
-                                            .overlay(Color("AppDarkGreen").opacity(0.5)))
+                    } .listRowBackground(ImageItemView(image: viewModel.mainImages[2]))
                     
                     NavigationLink(destination: MainView(viewModel: MainViewModel())) {
 
                         MainCellView(name: viewModel.mainTitles[3])
-                    } .listRowBackground(Image("")
-                                            .renderImage(url: URL(string: viewModel.mainImages[3])!)
-                                            .overlay(Color("AppDarkGreen").opacity(0.5)))
+                    } .listRowBackground(ImageItemView(image: viewModel.mainImages[3]))
                 }
                 .background(Color("AppDarkGreen").ignoresSafeArea())
                 .onAppear {
