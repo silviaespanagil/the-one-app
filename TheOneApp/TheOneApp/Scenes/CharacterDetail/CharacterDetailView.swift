@@ -23,7 +23,7 @@ struct CharacterDetailView: View {
                         
                         VStack {
                             
-                            DetailIntroView(image: viewModel.character.imageRace, name: viewModel.character.name, width: 150, height: 150)
+                            DetailIntroView(image: viewModel.character.imageRace, name: viewModel.character.name, width: viewModel.imageSize, height: viewModel.imageSize)
                                 .frame(height: detailGeo.size.height * 0.40, alignment: .bottom)
                             
                             VStack {

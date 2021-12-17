@@ -21,7 +21,7 @@ class CharacterDetailViewModel: ObservableObject {
     let unknownRace: String
     
     let cornerRadius: CGFloat = 25
-    let imageSize: CGFloat = 200
+    let imageSize: CGFloat = 150
     let paddingSize: CGFloat = 15
 
     private var cancellable: AnyCancellable?
