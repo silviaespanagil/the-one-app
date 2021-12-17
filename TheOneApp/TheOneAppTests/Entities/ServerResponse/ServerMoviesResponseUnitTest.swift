@@ -9,19 +9,19 @@ import XCTest
 @testable import TheOneApp
 
 class ServerMoviesResponseUnitTest: XCTestCase {
-
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         try super.setUpWithError()
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         
         try super.tearDownWithError()
     }
-
+    
     func testConvertToEntity() throws {
         
         // Givem
@@ -33,7 +33,9 @@ class ServerMoviesResponseUnitTest: XCTestCase {
                                                         boxOfficeRevenueInMillions: 2917,
                                                         academyAwardNominations: 30,
                                                         academyAwardWins: 17,
-                                                        rottenTomatoesScore: 94)
+                                                        rottenTomatoesScore: 94,
+                                                        movieImage: "",
+                                                        releaseDate: 0)
         
         // When
         let movie = serverMoviesResponse.convertToEntity()
