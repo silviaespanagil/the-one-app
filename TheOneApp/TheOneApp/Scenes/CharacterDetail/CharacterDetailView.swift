@@ -23,23 +23,8 @@ struct CharacterDetailView: View {
                         
                         VStack {
                             
-                            VStack {
-                                
-                                Image("")
-                                    .renderImage(url: URL(string: viewModel.character.imageRace)!)
-                                    .frame(width: 200, height: 200)
-                                    .clipShape(RoundedRectangle(cornerRadius: viewModel.cornerRadius))
-                                    .shadow(color:Color("AppMediumGreen"), radius: 3, x: 0, y: 3)
-                                    .padding()
-                                
-                                Text(viewModel.character.name)
-                                    .foregroundColor(Color("AppWhite"))
-                                    .font(.largeTitle)
-                                    .fontWeight(.bold)
-                                    .tracking(5)
-                                    .textCase(.uppercase)
-                            }
-                            .frame(height: detailGeo.size.height * 0.40, alignment: .bottom)
+                            DetailIntroView(image: viewModel.character.imageRace, name: viewModel.character.name, width: 150, height: 150)
+                                .frame(height: detailGeo.size.height * 0.40, alignment: .bottom)
                             
                             VStack {
                                 
@@ -47,11 +32,11 @@ struct CharacterDetailView: View {
                                     .foregroundColor(Color("AppDarkGreen"))
                                     .padding()
                                 
-                                CharacterDetailItemView(title: viewModel.born, value: viewModel.character.birth)
+                                DetailItemView(title: viewModel.born, value: viewModel.character.birth)
                                 
-                                CharacterDetailItemView(title: viewModel.death, value: viewModel.character.death)
+                                DetailItemView(title: viewModel.death, value: viewModel.character.death)
                                 
-                                CharacterDetailItemView(title: viewModel.partner, value: viewModel.character.spouse)
+                                DetailItemView(title: viewModel.partner, value: viewModel.character.spouse)
                                 
                                 if let wikiURL = viewModel.character.wikiURL, !wikiURL.isEmpty {
                                     HStack {
