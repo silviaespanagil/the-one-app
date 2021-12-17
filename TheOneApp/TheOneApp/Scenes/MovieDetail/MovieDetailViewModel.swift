@@ -22,6 +22,9 @@ class MovieDetailViewModel: ObservableObject {
     let oscarNomination: String
     let oscarWin: String
     
+    let cornerRadius: CGFloat
+    let height: CGFloat
+    
     private var cancellable: AnyCancellable?
     
     // MARK: - Methods
@@ -29,6 +32,7 @@ class MovieDetailViewModel: ObservableObject {
     init(movie: Movie) {
         
         self.movie = movie
+        
         release = "Released on "
         tomatometer = "Tomatometer:"
         runtime = "Movie length:"
@@ -37,7 +41,8 @@ class MovieDetailViewModel: ObservableObject {
         oscarNomination = "Academy Awards Nominations:"
         oscarWin = "Academy Awards Wins:"
         
-        
+        cornerRadius = 50
+        height = 200
     }
     
     func getMovieDetail() {

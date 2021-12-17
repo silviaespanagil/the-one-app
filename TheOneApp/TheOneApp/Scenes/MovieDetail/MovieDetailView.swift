@@ -23,30 +23,30 @@ struct MovieDetailView: View {
                         
                         VStack {
                             
-                            DetailIntroView(image: viewModel.movie.movieImage, name: viewModel.movie.name, width: detailGeo.size.width*0.85, height: 200)
+                            DetailIntroView(image: viewModel.movie.movieImage, name: viewModel.movie.name, width: detailGeo.size.width*0.85, height: viewModel.height)
                                 .frame(height: detailGeo.size.height * 0.40, alignment: .bottom)
                             
                             VStack {
                                 
-                                Text("\("Released on ")\(String(viewModel.movie.releaseDate))")
+                                Text("\(viewModel.release)\(String(viewModel.movie.releaseDate))")
                                     .foregroundColor(Color("AppDarkGreen"))
                                     .padding()
                                 
-                                DetailItemView(title: "Tomatometer", value: String(viewModel.movie.rottenTomatoesScore))
+                                DetailItemView(title: viewModel.tomatometer, value: String(viewModel.movie.rottenTomatoesScore))
                                 
-                                DetailItemView(title: "Movie length:", value: "\(String(viewModel.movie.runtime))\(" minutes")")
+                                DetailItemView(title: viewModel.runtime, value: "\(String(viewModel.movie.runtime))\(" minutes")")
                                 
-                                DetailItemView(title: "Budget:", value: "\(String(viewModel.movie.budget))\(" millions")")
+                                DetailItemView(title: viewModel.budget, value: "\(String(viewModel.movie.budget))\(" millions")")
                                 
-                                DetailItemView(title: "Boxoffice:", value: "\(String(viewModel.movie.revenue))\(" millions")")
+                                DetailItemView(title: viewModel.revenue, value: "\(String(viewModel.movie.revenue))\(" millions")")
                                 
-                                DetailItemView(title: "Academy Awards Nominations:", value: String(viewModel.movie.oscarNominations))
+                                DetailItemView(title: viewModel.oscarNomination, value: String(viewModel.movie.oscarNominations))
                                 
-                                DetailItemView(title: "Academy Awards Win:", value: String(viewModel.movie.oscarWins))
+                                DetailItemView(title: viewModel.oscarWin, value: String(viewModel.movie.oscarWins))
                             }
                             .frame(width: detailGeo.size.width * 1, height: detailGeo.size.height * 0.7, alignment: .top)
                             .background(Color("AppSalmon")).ignoresSafeArea()
-                            .clipShape(RoundedRectangle(cornerRadius: 50))
+                            .clipShape(RoundedRectangle(cornerRadius: viewModel.cornerRadius))
                         }
                     )
             }
