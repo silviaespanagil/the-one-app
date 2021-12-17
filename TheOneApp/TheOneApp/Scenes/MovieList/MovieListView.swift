@@ -26,7 +26,8 @@ struct MovieListView: View {
                     
                     if movie.name != viewModel.lotrSeries && movie.name != viewModel.hobbitSeries {
                         
-                        MovieCellView(name: movie.name, image: movie.movieImage)
+                        NavigationLink(destination: MovieDetailView(viewModel: MovieDetailViewModel(movie: movie))) {
+                            MovieCellView(name: movie.name, image: movie.movieImage)}
                     }
                 }
             }.padding(.horizontal)
