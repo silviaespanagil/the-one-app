@@ -103,7 +103,7 @@ class ServerMoviesResponseUnitTest: XCTestCase {
         XCTAssertEqual(date, releaseDate)
     }
     
-    func testCheckName() {
+    func testEditMovieName() {
         
         // Given
         
@@ -120,7 +120,7 @@ class ServerMoviesResponseUnitTest: XCTestCase {
                                                        releaseDate: 2012)
         
         // When
-        let name = serverMoviesResponse.checkName()
+        let name = serverMoviesResponse.editMovieName()
         
         // Then
         

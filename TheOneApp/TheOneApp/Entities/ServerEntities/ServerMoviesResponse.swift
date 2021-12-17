@@ -24,7 +24,7 @@ struct ServerMoviesResponse: Codable {
     func convertToEntity() -> Movie {
         
         return Movie(id: _id,
-                     name: checkName(),
+                     name: editMovieName(),
                      runtime: runtimeInMinutes,
                      budget: budgetInMillions,
                      revenue: boxOfficeRevenueInMillions,
@@ -86,7 +86,7 @@ struct ServerMoviesResponse: Codable {
         }
     }
     
-    func checkName() -> String {
+    func editMovieName() -> String {
         
         if name.contains("Journey") {
             return "An Unexpected Journey"
