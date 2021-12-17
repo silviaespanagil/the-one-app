@@ -24,7 +24,7 @@ class ServerMoviesResponseUnitTest: XCTestCase {
     
     func testConvertToEntity() throws {
         
-        // Givem
+        // Given
         
         let serverMoviesResponse = ServerMoviesResponse(_id: "5cd95395de30eff6ebccde56",
                                                         name: "The Lord of the Rings Series",
@@ -51,5 +51,80 @@ class ServerMoviesResponseUnitTest: XCTestCase {
         XCTAssertEqual(movie.oscarWins, serverMoviesResponse.academyAwardWins)
         XCTAssertEqual(movie.rottenTomatoesScore, serverMoviesResponse.rottenTomatoesScore)
         
+    }
+    
+    func testGetMovieImage() {
+        
+        // Given
+        
+        let movieImage = "https://images.mubicdn.net/images/film/1754/cache-47885-1563055256/image-w1280.jpg"
+        let serverMoviesResponse = ServerMoviesResponse(_id: "5cd95395de30eff6ebccde5c",
+                                                       name: "The Fellowship of the Ring",
+                                                       runtimeInMinutes: 178,
+                                                       budgetInMillions: 93,
+                                                       boxOfficeRevenueInMillions: 871.5,
+                                                       academyAwardNominations: 13,
+                                                       academyAwardWins: 4,
+                                                       rottenTomatoesScore: 91,
+                                                       movieImage: "https://images.mubicdn.net/images/film/1754/cache-47885-1563055256/image-w1280.jpg",
+                                                       releaseDate: 2001)
+        
+        // When
+        let image = serverMoviesResponse.getMovieImage()
+        
+        // Then
+        
+        XCTAssertNotNil(image)
+        XCTAssertEqual(image, movieImage)
+    }
+    
+    func testGetReleaseDate() {
+        
+        // Given
+        
+        let date = 2001
+        let serverMoviesResponse = ServerMoviesResponse(_id: "5cd95395de30eff6ebccde5c",
+                                                       name: "The Fellowship of the Ring",
+                                                       runtimeInMinutes: 178,
+                                                       budgetInMillions: 93,
+                                                       boxOfficeRevenueInMillions: 871.5,
+                                                       academyAwardNominations: 13,
+                                                       academyAwardWins: 4,
+                                                       rottenTomatoesScore: 91,
+                                                       movieImage: "https://images.mubicdn.net/images/film/1754/cache-47885-1563055256/image-w1280.jpg",
+                                                       releaseDate: 2001)
+        
+        // When
+        let releaseDate = serverMoviesResponse.getReleaseDate()
+        
+        // Then
+        
+        XCTAssertNotNil(releaseDate)
+        XCTAssertEqual(date, releaseDate)
+    }
+    
+    func testCheckName() {
+        
+        // Given
+        
+        let checkedName = "An Unexpected Journey"
+        let serverMoviesResponse = ServerMoviesResponse(_id: "5cd95395de30eff6ebccde58",
+                                                       name: "The Unexpected Journey",
+                                                       runtimeInMinutes: 169,
+                                                       budgetInMillions: 200,
+                                                       boxOfficeRevenueInMillions: 1021,
+                                                       academyAwardNominations: 3,
+                                                       academyAwardWins: 1,
+                                                       rottenTomatoesScore: 64,
+                                                       movieImage: "",
+                                                       releaseDate: 2012)
+        
+        // When
+        let name = serverMoviesResponse.checkName()
+        
+        // Then
+        
+        XCTAssertNotNil(name)
+        XCTAssertEqual(checkedName, name)
     }
 }
