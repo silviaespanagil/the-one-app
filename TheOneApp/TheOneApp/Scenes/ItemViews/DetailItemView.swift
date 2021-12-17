@@ -1,5 +1,5 @@
 //
-//  CharacterDetailItemView.swift
+//  DetailItemView.swift
 //  TheOneApp
 //
 //  Created by Silvia España on 14/12/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CharacterDetailItemView: View {
+struct DetailItemView: View {
     
     var title: String
     var value: String?
