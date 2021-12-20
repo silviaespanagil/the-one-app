@@ -1,17 +1,17 @@
 //
-//  MovieRepositoryImplementationUnitTest.swift
+//  BookRepositoryImplementationUnitTest.swift
 //  TheOneAppTests
 //
-//  Created by Silvia España on 16/12/21.
+//  Created by Silvia España on 20/12/21.
 //
 
 import XCTest
 import Combine
 @testable import TheOneApp
 
-class MovieRepositoryImplementationUnitTest: XCTestCase {
-    
-    var sut: MovieRepositoryImplementation!
+class BookRepositoryImplementationUnitTest: XCTestCase {
+
+    var sut: BookRepositoryImplementation!
     
     var cancellable: AnyCancellable?
     
@@ -32,20 +32,20 @@ class MovieRepositoryImplementationUnitTest: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func testGetAllMoviesOK() throws {
+    func testGetAllBooksOK() throws {
         
         // Given
-        let endpoint = "movie"
-        let session = getMovieSession(statusCode: sucessStatusCode, endpoint: endpoint)
+        let endpoint = "book"
+        let session = getBookSession(statusCode: sucessStatusCode, endpoint: endpoint)
         
-        let remote = MovieDataSource(baseURL: baseUrlString, session: session)
+        let remote = BookDataSource(baseURL: baseUrlString, session: session)
         
-        sut = MovieRepositoryImplementation(dataSource: remote)
+        sut = BookRepositoryImplementation(dataSource: remote)
         
         let exp = self.expectation(description: "expected values")
         
         // When
-        cancellable = sut!.getAllMovies()
+        cancellable = sut!.getAllBooks()
             .sink(receiveCompletion: { completion in
                 
                 switch completion {
@@ -57,17 +57,11 @@ class MovieRepositoryImplementationUnitTest: XCTestCase {
                     break
                 }
                 
-            }, receiveValue: { movie in
+            }, receiveValue: { book in
                 
-                XCTAssertEqual(movie.count, 1)
-                XCTAssertEqual(movie.first?.id, "5cd95395de30eff6ebccde56")
-                XCTAssertEqual(movie.first?.name, "The Lord of the Rings Series")
-                XCTAssertEqual(movie.first?.runtime, 558)
-                XCTAssertEqual(movie.first?.budget, 281)
-                XCTAssertEqual(movie.first?.revenue, 2917)
-                XCTAssertEqual(movie.first?.oscarNominations, 30)
-                XCTAssertEqual(movie.first?.oscarWins, 17)
-                XCTAssertEqual(movie.first?.rottenTomatoesScore, 94)
+                XCTAssertEqual(book.count, 1)
+                XCTAssertEqual(book.first?.id, "5cf5805fb53e011a64671582")
+                XCTAssertEqual(book.first?.name, "The Fellowship Of The Ring")
             })
         
         wait(for: [exp], timeout: timeoutTime)
@@ -76,20 +70,20 @@ class MovieRepositoryImplementationUnitTest: XCTestCase {
         XCTAssertNotNil(cancellable)
     }
     
-    func testGetMoviesError() {
+    func testGetBooksError() {
         
         // Given
-        let endpoint = "movie"
-        let session = getMovieSession(statusCode: failureStatusCode, endpoint: endpoint)
+        let endpoint = "book"
+        let session = getBookSession(statusCode: failureStatusCode, endpoint: endpoint)
         
-        let remote = MovieDataSource(baseURL: baseUrlString, session: session)
+        let remote = BookDataSource(baseURL: baseUrlString, session: session)
         
-        sut = MovieRepositoryImplementation(dataSource: remote)
+        sut = BookRepositoryImplementation(dataSource: remote)
         
         let exp = self.expectation(description: "expected values")
         
         // When
-        cancellable = sut!.getAllMovies()
+        cancellable = sut!.getAllBooks()
             .sink(receiveCompletion: { completion in
                 
                 switch completion {
@@ -101,7 +95,7 @@ class MovieRepositoryImplementationUnitTest: XCTestCase {
                     exp.fulfill()
                 }
                 
-            }, receiveValue: { movie in
+            }, receiveValue: { book in
                 
                 // nothing
             })
@@ -113,15 +107,15 @@ class MovieRepositoryImplementationUnitTest: XCTestCase {
     }
 }
 
-extension MovieRepositoryImplementationUnitTest {
+extension BookRepositoryImplementationUnitTest {
     
-    func getMovieSession(statusCode: Int, endpoint: String) -> URLSession {
+    func getBookSession(statusCode: Int, endpoint: String) -> URLSession {
         
         //URL we expect to call
         let url = URL(string: "http://jsonplaceholder.typicode.com/\(endpoint)")
         
         // data we expect to receive
-        let data = getMovieData()
+        let data = getBookData()
         
         // attach that to some fixed data in our protocol handler
         URLProtocolMock.testURLs = [url: data]
@@ -139,21 +133,16 @@ extension MovieRepositoryImplementationUnitTest {
         
         return session
     }
-    
-    func getMovieData() -> Data {
+   
+    func getBookData() -> Data {
         
         let dataString = """
                     {
                         "docs":[
                             {
-                                "_id": "5cd95395de30eff6ebccde56",
-                                        "name": "The Lord of the Rings Series",
-                                        "runtimeInMinutes": 558,
-                                        "budgetInMillions": 281,
-                                        "boxOfficeRevenueInMillions": 2917,
-                                        "academyAwardNominations": 30,
-                                        "academyAwardWins": 17,
-                                        "rottenTomatoesScore": 94
+                                "_id": "5cf5805fb53e011a64671582",
+                                        "name": "The Fellowship Of The Ring",
+                                        "chapterName": "A Long-expected Party"
                             }
                         ]
                     }
