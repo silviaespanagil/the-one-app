@@ -1,5 +1,5 @@
 //
-//  MockBookRepository.swift
+//  MockChapterRepository.swift
 //  TheOneAppTests
 //
 //  Created by Silvia España on 20/12/21.
@@ -9,13 +9,13 @@ import XCTest
 import Combine
 @testable import TheOneApp
 
-class MockBookRepository: BookRepository {
+class MockChapterRepository: ChapterRepository {
+
+    var isGetChapterByBookCalled = false
     
-    var isGetAllBooksCalled = false
-    
-    func getAllBooks() -> AnyPublisher<[Book], Error> {
+    func getChaptersByBookId(id: String) -> AnyPublisher<[Chapter], Error> {
         
-        self.isGetAllBooksCalled = true
+        self.isGetChapterByBookCalled = true
         
         return Just([])
             .setFailureType(to: Error.self)
