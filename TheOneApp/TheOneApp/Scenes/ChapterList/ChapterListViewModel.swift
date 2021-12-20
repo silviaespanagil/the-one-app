@@ -17,11 +17,14 @@ class ChapterListViewModel: ObservableObject {
     
     @Published public private(set) var showProgressView = false
     
+    let chapterHeader: String
+    
     private var cancellable: AnyCancellable?
     
     init(book: Book) {
         
         self.book = book
+        chapterHeader = "Chapter"
     }
     
     // MARK: - Methods

@@ -17,16 +17,20 @@ struct ChapterListView: View {
             
             List {
                 
-                if viewModel.showProgressView {
+                Section(header: Text(viewModel.chapterHeader).foregroundColor(Color("AppSalmon"))){
                     
-                    LoadingAnimationView()
-                        .listRowBackground(Color("AppSalmon"))
-                }
-                
-                ForEach(viewModel.chapters) { chapter in
+                    if viewModel.showProgressView {
+                        
+                        LoadingAnimationView()
+                            .listRowBackground(Color("AppSalmon"))
+                    }
                     
-                    ChapterCellView(id: chapter.id,
-                                    chapterName: chapter.chapterName)
+                    ForEach(viewModel.chapters) { chapter in
+                        
+                        ChapterCellView(id: chapter.id,
+                                        chapterName: chapter.chapterName)
+                    }
+                    
                 }.listRowBackground(Color("AppSalmon"))
             }.onAppear {
                 
