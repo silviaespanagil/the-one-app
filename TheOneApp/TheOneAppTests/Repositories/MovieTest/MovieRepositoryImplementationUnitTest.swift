@@ -80,7 +80,7 @@ class MovieRepositoryImplementationUnitTest: XCTestCase {
         
         // Given
         let endpoint = "movie"
-        let session = getMovieSession(statusCode: sucessStatusCode, endpoint: endpoint)
+        let session = getMovieSession(statusCode: failureStatusCode, endpoint: endpoint)
         
         let remote = MovieDataSource(baseURL: baseUrlString, session: session)
         
@@ -95,10 +95,10 @@ class MovieRepositoryImplementationUnitTest: XCTestCase {
                 switch completion {
                     
                 case.finished:
-                    exp.fulfill()
+                    break
                     
                 case.failure:
-                    break
+                    exp.fulfill()
                 }
                 
             }, receiveValue: { movie in
