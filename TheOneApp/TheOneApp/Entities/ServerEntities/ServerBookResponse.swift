@@ -11,14 +11,12 @@ struct ServerBookResponse: Codable {
     
     let _id: String
     let name: String
-    let chapterName: String?
     let bookImage: String?
     
     func convertToEntity() -> Book {
         
         return Book(id: _id,
                     name: name,
-                    chapterName: chapterName ?? "",
                     bookImage: getBookImage())
     }
     

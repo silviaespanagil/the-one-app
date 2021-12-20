@@ -31,15 +31,6 @@ class BookDataSource {
         return apiManager.performRequest(urlRequest: urlRequest)
         
     }
-    
-    func getBookChapter(id: String) -> AnyPublisher<ServerBookResponse, Error> {
-        
-        let apiManager = APIManager(baseURL: baseURLString, session: session)
-        
-        let urlRequest = getBookChapterEndpoint(id: id)
-        
-        return apiManager.performRequest(urlRequest: urlRequest)
-    }
 }
 
 // MARK: Endpoints
@@ -49,17 +40,6 @@ extension BookDataSource {
     func getAllBooksEndpoint() -> URLRequest {
         
         let endpoint = "\(baseURLString)\(BookDataSource.getAllBooksURL)"
-        
-        let components = URLComponents(string: endpoint)
-        
-        let urlRequest = URLRequest(url: (components?.url!)!)
-        
-        return urlRequest
-    }
-    
-    func getBookChapterEndpoint(id: String) -> URLRequest {
-        
-        let endpoint = "\(baseURLString)\(BookDataSource.getAllBooksURL)/\(id)/\(BookDataSource.getBookChaptersURL)"
         
         let components = URLComponents(string: endpoint)
         
