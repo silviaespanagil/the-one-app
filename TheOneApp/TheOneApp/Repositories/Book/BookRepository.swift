@@ -11,6 +11,4 @@ import Combine
 protocol BookRepository {
     
     func getAllBooks() -> AnyPublisher<[Book], Error>
-    
-    func getBookChapter(id: String) -> AnyPublisher<Book, Error>
 }

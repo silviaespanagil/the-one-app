@@ -1,5 +1,5 @@
 //
-//  BookDataSource.swift
+//  ChapterDataSource.swift
 //  TheOneApp
 //
 //  Created by Silvia España on 20/12/21.
@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class BookDataSource {
+class ChapterDataSource {
     
     static let getAllBooksURL: String = "book"
     static let getBookChaptersURL: String = "chapter"
@@ -22,24 +22,23 @@ class BookDataSource {
         self.session = session
     }
     
-    func getAllBooks() -> AnyPublisher<ServerBaseArrayResponse<ServerBookResponse>, Error> {
+    func getChaptersByBookId(id: String) -> AnyPublisher<ServerBaseArrayResponse<ServerChapterResponse>, Error> {
         
         let apiManager = APIManager(baseURL: baseURLString, session: session)
         
-        let urlRequest = getAllBooksEndpoint()
+        let urlRequest =  getChaptersByBookIdEndpoint(id: id)
         
         return apiManager.performRequest(urlRequest: urlRequest)
-        
     }
 }
 
 // MARK: Endpoints
 
-extension BookDataSource {
+extension ChapterDataSource {
     
-    func getAllBooksEndpoint() -> URLRequest {
+    func getChaptersByBookIdEndpoint(id: String) -> URLRequest {
         
-        let endpoint = "\(baseURLString)\(BookDataSource.getAllBooksURL)"
+        let endpoint = "\(baseURLString)\(ChapterDataSource.getAllBooksURL)/\(id)/\(ChapterDataSource.getBookChaptersURL)"
         
         let components = URLComponents(string: endpoint)
         

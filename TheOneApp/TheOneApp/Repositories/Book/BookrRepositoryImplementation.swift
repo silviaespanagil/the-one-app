@@ -35,17 +35,4 @@ class BookRepositoryImplementation: BookRepository {
         .mapError({ $0 })
         .eraseToAnyPublisher()
     }
-    
-    func getBookChapter(id: String) -> AnyPublisher<Book, Error> {
-        
-        return dataSource.getBookChapter(id: id).map { serverBook -> Book in
-            
-            let book = serverBook.convertToEntity()
-            
-            return book
-        }
-        .mapError({ $0 })
-        .eraseToAnyPublisher()
-        
-    }
 }

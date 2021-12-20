@@ -28,7 +28,7 @@ class ServerBookResponseUnitTest: XCTestCase {
         
         let serverBookResponse = ServerBookResponse(_id: "5cf5805fb53e011a64671582",
                                                     name: "The Fellowship Of The Ring",
-                                                    chapterName: "")
+                                                    bookImage: "https://i1.wp.com/www.casualoptimist.com/wp-content/uploads/2020/09/fellowship-of-the-ring-illustration-johan-egerkrans.jpg?w=1650")
         
         // When
         

@@ -15,27 +15,36 @@ struct BookListView: View {
         
         VStack {
             
-        GeometryReader { bookGeo in
-            
-            List {
+            GeometryReader { bookGeo in
                 
-                ForEach(viewModel.books) { book in
+                List {
                     
-                    Text("").listRowBackground(Image("")
+                    if viewModel.showProgressView {
+                        
+                        LoadingAnimationView()
+                            .listRowBackground(Color("AppDarkGreen"))
+                    }
+                    
+                    ForEach(viewModel.books) { book in
+                        
+                        NavigationLink(destination:ChapterListView(viewModel: ChapterListViewModel(book: book))) {
+                            
+                            Text("")
+                        }.listRowBackground(Image("")
                                                 .renderImage(url: URL(string: book.bookImage)!)
                                                 .scaledToFit())
+                    }
                 }
+                .onAppear {
+                    viewModel.getAllBooks()
+                }.environment(\.defaultMinListRowHeight, bookGeo.size.height * 0.25 )
             }
-            .onAppear {
-                viewModel.getAllBooks()
-            }.environment(\.defaultMinListRowHeight, bookGeo.size.height * 0.25 )
-        }
             
             Text(viewModel.coverCredit)
                 .font(.footnote)
                 .foregroundColor(Color("AppSalmon"))
                 .padding()
-    }.background(Color("AppDarkGreen")).ignoresSafeArea()}
+        }.background(Color("AppDarkGreen")).ignoresSafeArea()}
 }
 
 

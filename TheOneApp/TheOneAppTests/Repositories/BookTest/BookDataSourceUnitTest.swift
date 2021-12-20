@@ -38,19 +38,4 @@ class BookDataSourceUnitTest: XCTestCase {
         XCTAssertNotNil(response)
         XCTAssertEqual(response.url?.absoluteString.split(separator: "?").first, "http://jsonplaceholder.typicode.com/\(book)")
     }
-    
-    func testGetBookChapterEndpoint() throws {
-        
-        // Given
-        let book = "book"
-        let chapter = "chapter"
-        let id = "5cf5805fb53e011a64671582"
-        
-        // When
-        let response = sut!.getBookChapterEndpoint(id: id)
-        
-        // Then
-        XCTAssertNotNil(response)
-        XCTAssertEqual(response.url?.absoluteString.split(separator: "?").first, "http://jsonplaceholder.typicode.com/\(book)/\(id)/\(chapter)")
-    }
 }

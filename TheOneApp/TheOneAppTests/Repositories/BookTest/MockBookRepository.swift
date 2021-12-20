@@ -28,8 +28,8 @@ class MockBookRepository: BookRepository {
         self.isGetBookChapterCalled = true
         
         return Just(Book(id: "5cf5805fb53e011a64671582",
-                          name: "The Fellowship Of The Ring",
-                          chapterName: "A Long-expected Party"))
+                         name: "The Fellowship Of The Ring",
+                         bookImage: "https://i1.wp.com/www.casualoptimist.com/wp-content/uploads/2020/09/fellowship-of-the-ring-illustration-johan-egerkrans.jpg?w=1650"))
         
             .setFailureType(to: Error.self)
             .eraseToAnyPublisher()

@@ -47,13 +47,21 @@
 		A777F06227707AD7001D63EC /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F06127707AD7001D63EC /* BookRepository.swift */; };
 		A777F06427707AE7001D63EC /* BookrRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F06327707AE7001D63EC /* BookrRepositoryImplementation.swift */; };
 		A777F067277082CE001D63EC /* GetAllBooksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F066277082CE001D63EC /* GetAllBooksUseCase.swift */; };
-		A777F069277082EF001D63EC /* GetBookChaptersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F068277082EF001D63EC /* GetBookChaptersUseCase.swift */; };
+		A777F069277082EF001D63EC /* GetChaptersByBookUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F068277082EF001D63EC /* GetChaptersByBookUseCase.swift */; };
 		A777F06B277085E9001D63EC /* ServerBookResponseUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F06A277085E9001D63EC /* ServerBookResponseUnitTest.swift */; };
 		A777F06F27708737001D63EC /* MockBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F06E27708737001D63EC /* MockBookRepository.swift */; };
 		A777F0712770874A001D63EC /* BookDataSourceUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F0702770874A001D63EC /* BookDataSourceUnitTest.swift */; };
 		A777F0732770875C001D63EC /* BookRepositoryImplementationUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F0722770875C001D63EC /* BookRepositoryImplementationUnitTest.swift */; };
 		A777F07827709975001D63EC /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F07727709975001D63EC /* BookListView.swift */; };
 		A777F07A27709988001D63EC /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F07927709988001D63EC /* BookListViewModel.swift */; };
+		A777F07E2770AE31001D63EC /* ChapterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F07D2770AE31001D63EC /* ChapterListViewModel.swift */; };
+		A777F0802770AE3E001D63EC /* ChapterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F07F2770AE3E001D63EC /* ChapterListView.swift */; };
+		A777F0822770B2B3001D63EC /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F0812770B2B3001D63EC /* Chapter.swift */; };
+		A777F0842770B2D8001D63EC /* ServerChapterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F0832770B2D8001D63EC /* ServerChapterResponse.swift */; };
+		A777F0872770B617001D63EC /* ChapterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F0862770B617001D63EC /* ChapterDataSource.swift */; };
+		A777F08A2770B631001D63EC /* ChapterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F0892770B631001D63EC /* ChapterRepository.swift */; };
+		A777F08C2770B647001D63EC /* ChapterRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F08B2770B647001D63EC /* ChapterRepositoryImplementation.swift */; };
+		A777F08E2770BCDA001D63EC /* ChapterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F08D2770BCDA001D63EC /* ChapterCellView.swift */; };
 		A785B6A1276208BA006A50FC /* CharacterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6A0276208BA006A50FC /* CharacterCellView.swift */; };
 		A785B6A527620D13006A50FC /* RenderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6A427620D13006A50FC /* RenderImage.swift */; };
 		A785B6BB27623740006A50FC /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A785B6BA27623740006A50FC /* Lottie */; };
@@ -144,13 +152,21 @@
 		A777F06127707AD7001D63EC /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		A777F06327707AE7001D63EC /* BookrRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookrRepositoryImplementation.swift; sourceTree = "<group>"; };
 		A777F066277082CE001D63EC /* GetAllBooksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllBooksUseCase.swift; sourceTree = "<group>"; };
-		A777F068277082EF001D63EC /* GetBookChaptersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBookChaptersUseCase.swift; sourceTree = "<group>"; };
+		A777F068277082EF001D63EC /* GetChaptersByBookUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChaptersByBookUseCase.swift; sourceTree = "<group>"; };
 		A777F06A277085E9001D63EC /* ServerBookResponseUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerBookResponseUnitTest.swift; sourceTree = "<group>"; };
 		A777F06E27708737001D63EC /* MockBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBookRepository.swift; sourceTree = "<group>"; };
 		A777F0702770874A001D63EC /* BookDataSourceUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataSourceUnitTest.swift; sourceTree = "<group>"; };
 		A777F0722770875C001D63EC /* BookRepositoryImplementationUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepositoryImplementationUnitTest.swift; sourceTree = "<group>"; };
 		A777F07727709975001D63EC /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
 		A777F07927709988001D63EC /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
+		A777F07D2770AE31001D63EC /* ChapterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterListViewModel.swift; sourceTree = "<group>"; };
+		A777F07F2770AE3E001D63EC /* ChapterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterListView.swift; sourceTree = "<group>"; };
+		A777F0812770B2B3001D63EC /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
+		A777F0832770B2D8001D63EC /* ServerChapterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerChapterResponse.swift; sourceTree = "<group>"; };
+		A777F0862770B617001D63EC /* ChapterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterDataSource.swift; sourceTree = "<group>"; };
+		A777F0892770B631001D63EC /* ChapterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterRepository.swift; sourceTree = "<group>"; };
+		A777F08B2770B647001D63EC /* ChapterRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterRepositoryImplementation.swift; sourceTree = "<group>"; };
+		A777F08D2770BCDA001D63EC /* ChapterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCellView.swift; sourceTree = "<group>"; };
 		A785B6A0276208BA006A50FC /* CharacterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellView.swift; sourceTree = "<group>"; };
 		A785B6A427620D13006A50FC /* RenderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderImage.swift; sourceTree = "<group>"; };
 		A785B6C927637876006A50FC /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
@@ -417,7 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				A777F066277082CE001D63EC /* GetAllBooksUseCase.swift */,
-				A777F068277082EF001D63EC /* GetBookChaptersUseCase.swift */,
+				A777F068277082EF001D63EC /* GetChaptersByBookUseCase.swift */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -441,12 +457,32 @@
 			path = BookList;
 			sourceTree = "<group>";
 		};
+		A777F07B2770AE11001D63EC /* ChapterList */ = {
+			isa = PBXGroup;
+			children = (
+				A777F07D2770AE31001D63EC /* ChapterListViewModel.swift */,
+				A777F07F2770AE3E001D63EC /* ChapterListView.swift */,
+			);
+			path = ChapterList;
+			sourceTree = "<group>";
+		};
+		A777F0852770B603001D63EC /* Chapters */ = {
+			isa = PBXGroup;
+			children = (
+				A777F0862770B617001D63EC /* ChapterDataSource.swift */,
+				A777F0892770B631001D63EC /* ChapterRepository.swift */,
+				A777F08B2770B647001D63EC /* ChapterRepositoryImplementation.swift */,
+			);
+			path = Chapters;
+			sourceTree = "<group>";
+		};
 		A785B69F27620843006A50FC /* ListCellViews */ = {
 			isa = PBXGroup;
 			children = (
 				A785B6A0276208BA006A50FC /* CharacterCellView.swift */,
 				A785B6FB2768A45F006A50FC /* MainCellView.swift */,
 				A777F04E276CAD19001D63EC /* MovieCellView.swift */,
+				A777F08D2770BCDA001D63EC /* ChapterCellView.swift */,
 			);
 			path = ListCellViews;
 			sourceTree = "<group>";
@@ -533,6 +569,7 @@
 				A7EE930D274FF0D10046488C /* ServerCharacterResponse.swift */,
 				A777F023276A4FEB001D63EC /* ServerMoviesResponse.swift */,
 				A777F05C27707A14001D63EC /* ServerBookResponse.swift */,
+				A777F0832770B2D8001D63EC /* ServerChapterResponse.swift */,
 			);
 			path = ServerEntities;
 			sourceTree = "<group>";
@@ -543,6 +580,7 @@
 				A7EE9310274FF2220046488C /* Character.swift */,
 				A777F021276A4F06001D63EC /* Movies.swift */,
 				A777F05A276CE958001D63EC /* Book.swift */,
+				A777F0812770B2B3001D63EC /* Chapter.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -550,6 +588,7 @@
 		A7EE9314274FF4A70046488C /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				A777F0852770B603001D63EC /* Chapters */,
 				A777F05E27707AB4001D63EC /* Book */,
 				A777F025276A50EF001D63EC /* Movie */,
 				A7EE9315274FF4B40046488C /* Character */,
@@ -580,6 +619,7 @@
 		A7EE93212750F0960046488C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A777F07B2770AE11001D63EC /* ChapterList */,
 				A777F07627709958001D63EC /* BookList */,
 				A777F051276CBBCD001D63EC /* MovieDetail */,
 				A777F042276B8881001D63EC /* MovieList */,
@@ -742,14 +782,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A785B6E127676A9D006A50FC /* CharacterDetailViewModel.swift in Sources */,
+				A777F08E2770BCDA001D63EC /* ChapterCellView.swift in Sources */,
 				A785B6E327676AAE006A50FC /* CharacterDetailView.swift in Sources */,
 				A7EE93242750F0BC0046488C /* CharacterListViewModel.swift in Sources */,
 				A777F044276B890D001D63EC /* MovieListView.swift in Sources */,
 				A7EE9313274FF39B0046488C /* ServerBaseArrayResponse.swift in Sources */,
 				A777F055276CBBEC001D63EC /* MovieDetailViewModel.swift in Sources */,
+				A777F07E2770AE31001D63EC /* ChapterListViewModel.swift in Sources */,
+				A777F0822770B2B3001D63EC /* Chapter.swift in Sources */,
 				A7EE93262750F0CC0046488C /* CharacterListView.swift in Sources */,
 				A777F041276B7454001D63EC /* GetMovieDetailUseCase.swift in Sources */,
 				A777F06027707AC4001D63EC /* BookDataSource.swift in Sources */,
+				A777F08A2770B631001D63EC /* ChapterRepository.swift in Sources */,
 				A777F067277082CE001D63EC /* GetAllBooksUseCase.swift in Sources */,
 				A777F027276A5101001D63EC /* MovieDataSource.swift in Sources */,
 				A785B6FE2768A7EB006A50FC /* MainViewModel.swift in Sources */,
@@ -759,11 +803,13 @@
 				A777F03F276B742C001D63EC /* GetAllMoviesUseCase.swift in Sources */,
 				A785B6CA27637876006A50FC /* Race.swift in Sources */,
 				A747FAD5274FE75F00355FE0 /* APIManager.swift in Sources */,
+				A777F08C2770B647001D63EC /* ChapterRepositoryImplementation.swift in Sources */,
 				A777F0142769086D001D63EC /* LoadingAnimationViewLottieImplementation.swift in Sources */,
 				A777F07A27709988001D63EC /* BookListViewModel.swift in Sources */,
 				A777F024276A4FEB001D63EC /* ServerMoviesResponse.swift in Sources */,
 				A777F053276CBBE0001D63EC /* MovieDetailView.swift in Sources */,
 				A777F04F276CAD19001D63EC /* MovieCellView.swift in Sources */,
+				A777F0842770B2D8001D63EC /* ServerChapterResponse.swift in Sources */,
 				A777F05D27707A14001D63EC /* ServerBookResponse.swift in Sources */,
 				A7EE9311274FF2220046488C /* Character.swift in Sources */,
 				A747FAD8274FEA0900355FE0 /* HTTPError.swift in Sources */,
@@ -771,8 +817,10 @@
 				A7EE930E274FF0D10046488C /* ServerCharacterResponse.swift in Sources */,
 				A785B6FC2768A45F006A50FC /* MainCellView.swift in Sources */,
 				A785B6DE276759B1006A50FC /* GetCharacterDetailUseCase.swift in Sources */,
+				A777F0802770AE3E001D63EC /* ChapterListView.swift in Sources */,
 				A785B6A1276208BA006A50FC /* CharacterCellView.swift in Sources */,
 				A777F057276CC9D6001D63EC /* DetailIntroView.swift in Sources */,
+				A777F0872770B617001D63EC /* ChapterDataSource.swift in Sources */,
 				A777F07827709975001D63EC /* BookListView.swift in Sources */,
 				A777F06427707AE7001D63EC /* BookrRepositoryImplementation.swift in Sources */,
 				A7EE93202750EEFD0046488C /* GetAllCharactersUseCase.swift in Sources */,
@@ -783,7 +831,7 @@
 				A785B6FA27688A3A006A50FC /* MainView.swift in Sources */,
 				A777F00D276901F3001D63EC /* DetailItemView.swift in Sources */,
 				A777F022276A4F06001D63EC /* Movies.swift in Sources */,
-				A777F069277082EF001D63EC /* GetBookChaptersUseCase.swift in Sources */,
+				A777F069277082EF001D63EC /* GetChaptersByBookUseCase.swift in Sources */,
 				A7EE9319274FF54D0046488C /* Constants.swift in Sources */,
 				A777F02B276B30F9001D63EC /* MovieRepositoryImplementation.swift in Sources */,
 				A7EE931B2750E5040046488C /* CharacterRepository.swift in Sources */,
