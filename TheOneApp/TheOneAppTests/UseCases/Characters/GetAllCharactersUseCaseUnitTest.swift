@@ -24,16 +24,16 @@ class GetAllCharactersUseCaseUnitTest: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func testGetCharactersIsCalled(){
+    func testGetCharactersIsCalled() {
         
-        //GIVEN
+        //Given
         let repository = MockCharacterRepository()
         sut = GetAllCharactersUseCase(repository: repository)
         
-        //WHEN
+        //When
         _ = sut!.execute(page: 1)
         
-        //THEN
+        //Then
         XCTAssertTrue(repository.isGetAllCharactersCalled)
     }
 }
