@@ -46,6 +46,8 @@
 		A777F06027707AC4001D63EC /* BookDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F05F27707AC4001D63EC /* BookDataSource.swift */; };
 		A777F06227707AD7001D63EC /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F06127707AD7001D63EC /* BookRepository.swift */; };
 		A777F06427707AE7001D63EC /* BookrRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F06327707AE7001D63EC /* BookrRepositoryImplementation.swift */; };
+		A777F067277082CE001D63EC /* GetAllBooksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F066277082CE001D63EC /* GetAllBooksUseCase.swift */; };
+		A777F069277082EF001D63EC /* GetBookChaptersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F068277082EF001D63EC /* GetBookChaptersUseCase.swift */; };
 		A785B6A1276208BA006A50FC /* CharacterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6A0276208BA006A50FC /* CharacterCellView.swift */; };
 		A785B6A527620D13006A50FC /* RenderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6A427620D13006A50FC /* RenderImage.swift */; };
 		A785B6BB27623740006A50FC /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A785B6BA27623740006A50FC /* Lottie */; };
@@ -135,6 +137,8 @@
 		A777F05F27707AC4001D63EC /* BookDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataSource.swift; sourceTree = "<group>"; };
 		A777F06127707AD7001D63EC /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		A777F06327707AE7001D63EC /* BookrRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookrRepositoryImplementation.swift; sourceTree = "<group>"; };
+		A777F066277082CE001D63EC /* GetAllBooksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllBooksUseCase.swift; sourceTree = "<group>"; };
+		A777F068277082EF001D63EC /* GetBookChaptersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBookChaptersUseCase.swift; sourceTree = "<group>"; };
 		A785B6A0276208BA006A50FC /* CharacterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellView.swift; sourceTree = "<group>"; };
 		A785B6A427620D13006A50FC /* RenderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderImage.swift; sourceTree = "<group>"; };
 		A785B6C927637876006A50FC /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
@@ -396,6 +400,15 @@
 			path = Book;
 			sourceTree = "<group>";
 		};
+		A777F065277082BA001D63EC /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				A777F066277082CE001D63EC /* GetAllBooksUseCase.swift */,
+				A777F068277082EF001D63EC /* GetBookChaptersUseCase.swift */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
 		A785B69F27620843006A50FC /* ListCellViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -524,6 +537,7 @@
 		A7EE931E2750EEDD0046488C /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				A777F065277082BA001D63EC /* Books */,
 				A777F03D276B7408001D63EC /* Movies */,
 				A777F037276B722C001D63EC /* Characters */,
 			);
@@ -702,6 +716,7 @@
 				A7EE93262750F0CC0046488C /* CharacterListView.swift in Sources */,
 				A777F041276B7454001D63EC /* GetMovieDetailUseCase.swift in Sources */,
 				A777F06027707AC4001D63EC /* BookDataSource.swift in Sources */,
+				A777F067277082CE001D63EC /* GetAllBooksUseCase.swift in Sources */,
 				A777F027276A5101001D63EC /* MovieDataSource.swift in Sources */,
 				A785B6FE2768A7EB006A50FC /* MainViewModel.swift in Sources */,
 				A777F0132769086D001D63EC /* LoadingAnimationView.swift in Sources */,
@@ -732,6 +747,7 @@
 				A785B6FA27688A3A006A50FC /* MainView.swift in Sources */,
 				A777F00D276901F3001D63EC /* DetailItemView.swift in Sources */,
 				A777F022276A4F06001D63EC /* Movies.swift in Sources */,
+				A777F069277082EF001D63EC /* GetBookChaptersUseCase.swift in Sources */,
 				A7EE9319274FF54D0046488C /* Constants.swift in Sources */,
 				A777F02B276B30F9001D63EC /* MovieRepositoryImplementation.swift in Sources */,
 				A7EE931B2750E5040046488C /* CharacterRepository.swift in Sources */,
