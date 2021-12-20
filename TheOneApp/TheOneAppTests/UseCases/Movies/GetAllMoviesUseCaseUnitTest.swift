@@ -1,5 +1,5 @@
 //
-//  GetChaptersByBookUseCaseUnitTest.swift
+//  GetAllMoviesUseCaseUnitTest.swift
 //  TheOneAppTests
 //
 //  Created by Silvia España on 20/12/21.
@@ -8,10 +8,10 @@
 import XCTest
 @testable import TheOneApp
 
-class GetChaptersByBookUseCaseUnitTest: XCTestCase {
-    
-    var sut: GetChaptersByBookUseCase?
+class GetAllMoviesUseCaseUnitTest: XCTestCase {
 
+    var sut: GetAllMoviesUseCase?
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
@@ -26,16 +26,16 @@ class GetChaptersByBookUseCaseUnitTest: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func testGetChaptersByBookIsCalled() {
-
+    func testGetAllBooksIsCalled() {
+        
         // Given
-        let repository = MockChapterRepository()
-        sut = GetChaptersByBookUseCase(repository: repository)
-
+        let repository = MockMovieRepository()
+        sut = GetAllMoviesUseCase(repository: repository)
+        
         // When
-        _ = sut!.execute(id: "5cf5805fb53e011a64671582")
-
-        // Then
-        XCTAssertTrue(repository.isGetChapterByBookCalled)
+        _ = sut!.execute()
+        
+        //Then
+        XCTAssertTrue(repository.isGetAllMoviesCalled)
     }
 }
