@@ -8,7 +8,6 @@
 import Foundation
 import Combine
 
-
 class MovieDataSource {
     
     static let getAllMoviesURL: String = "movie"
