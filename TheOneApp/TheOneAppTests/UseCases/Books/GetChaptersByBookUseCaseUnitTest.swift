@@ -35,7 +35,7 @@ class GetChaptersByBookUseCaseUnitTest: XCTestCase {
         // When
         _ = sut!.execute(id: "5cf5805fb53e011a64671582")
 
-        //Then
+        // Then
         XCTAssertTrue(repository.isGetChapterByBookCalled)
     }
 }

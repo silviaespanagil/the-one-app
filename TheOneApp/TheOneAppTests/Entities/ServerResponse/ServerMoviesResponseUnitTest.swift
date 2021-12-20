@@ -123,7 +123,6 @@ class ServerMoviesResponseUnitTest: XCTestCase {
         let name = serverMoviesResponse.editMovieName()
         
         // Then
-        
         XCTAssertNotNil(name)
         XCTAssertEqual(checkedName, name)
     }

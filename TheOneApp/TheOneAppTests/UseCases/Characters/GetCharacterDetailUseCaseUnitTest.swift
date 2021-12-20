@@ -24,16 +24,16 @@ class GetCharacterDetailUseCaseUnitTest: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func testGetCharacterDetailIsCalled(){
+    func testGetCharacterDetailIsCalled() {
         
-        //GIVEN
+        // Given
         let repository = MockCharacterRepository()
         sut = GetCharacterDetailUseCase(repository: repository)
         
-        //WHEN
+        // When
         _ = sut!.execute(id : "5cdbdecb6dc0baeae48cfaa6")
         
-        //THEN
+        // Then
         XCTAssertTrue(repository.isCharacterDetailCalled)
     }
 }

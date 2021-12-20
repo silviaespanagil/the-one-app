@@ -25,17 +25,14 @@ class ServerBookResponseUnitTest: XCTestCase {
     func testConvertToEntity() throws {
         
         // Given
-        
         let serverBookResponse = ServerBookResponse(_id: "5cf5805fb53e011a64671582",
                                                     name: "The Fellowship Of The Ring",
                                                     bookImage: "https://i1.wp.com/www.casualoptimist.com/wp-content/uploads/2020/09/fellowship-of-the-ring-illustration-johan-egerkrans.jpg?w=1650")
         
         // When
-        
         let book = serverBookResponse.convertToEntity()
         
         // Then
-        
         XCTAssertNotNil(book)
         XCTAssertEqual(book.id, serverBookResponse._id)
         XCTAssertEqual(book.name, serverBookResponse.name)
