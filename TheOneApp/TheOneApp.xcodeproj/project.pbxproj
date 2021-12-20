@@ -52,6 +52,8 @@
 		A777F06F27708737001D63EC /* MockBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F06E27708737001D63EC /* MockBookRepository.swift */; };
 		A777F0712770874A001D63EC /* BookDataSourceUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F0702770874A001D63EC /* BookDataSourceUnitTest.swift */; };
 		A777F0732770875C001D63EC /* BookRepositoryImplementationUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F0722770875C001D63EC /* BookRepositoryImplementationUnitTest.swift */; };
+		A777F07827709975001D63EC /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F07727709975001D63EC /* BookListView.swift */; };
+		A777F07A27709988001D63EC /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F07927709988001D63EC /* BookListViewModel.swift */; };
 		A785B6A1276208BA006A50FC /* CharacterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6A0276208BA006A50FC /* CharacterCellView.swift */; };
 		A785B6A527620D13006A50FC /* RenderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6A427620D13006A50FC /* RenderImage.swift */; };
 		A785B6BB27623740006A50FC /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A785B6BA27623740006A50FC /* Lottie */; };
@@ -147,6 +149,8 @@
 		A777F06E27708737001D63EC /* MockBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBookRepository.swift; sourceTree = "<group>"; };
 		A777F0702770874A001D63EC /* BookDataSourceUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataSourceUnitTest.swift; sourceTree = "<group>"; };
 		A777F0722770875C001D63EC /* BookRepositoryImplementationUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepositoryImplementationUnitTest.swift; sourceTree = "<group>"; };
+		A777F07727709975001D63EC /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
+		A777F07927709988001D63EC /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
 		A785B6A0276208BA006A50FC /* CharacterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellView.swift; sourceTree = "<group>"; };
 		A785B6A427620D13006A50FC /* RenderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderImage.swift; sourceTree = "<group>"; };
 		A785B6C927637876006A50FC /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
@@ -428,6 +432,15 @@
 			path = BookTest;
 			sourceTree = "<group>";
 		};
+		A777F07627709958001D63EC /* BookList */ = {
+			isa = PBXGroup;
+			children = (
+				A777F07727709975001D63EC /* BookListView.swift */,
+				A777F07927709988001D63EC /* BookListViewModel.swift */,
+			);
+			path = BookList;
+			sourceTree = "<group>";
+		};
 		A785B69F27620843006A50FC /* ListCellViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -567,6 +580,7 @@
 		A7EE93212750F0960046488C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A777F07627709958001D63EC /* BookList */,
 				A777F051276CBBCD001D63EC /* MovieDetail */,
 				A777F042276B8881001D63EC /* MovieList */,
 				A777F00B276901D6001D63EC /* ItemViews */,
@@ -746,6 +760,7 @@
 				A785B6CA27637876006A50FC /* Race.swift in Sources */,
 				A747FAD5274FE75F00355FE0 /* APIManager.swift in Sources */,
 				A777F0142769086D001D63EC /* LoadingAnimationViewLottieImplementation.swift in Sources */,
+				A777F07A27709988001D63EC /* BookListViewModel.swift in Sources */,
 				A777F024276A4FEB001D63EC /* ServerMoviesResponse.swift in Sources */,
 				A777F053276CBBE0001D63EC /* MovieDetailView.swift in Sources */,
 				A777F04F276CAD19001D63EC /* MovieCellView.swift in Sources */,
@@ -758,6 +773,7 @@
 				A785B6DE276759B1006A50FC /* GetCharacterDetailUseCase.swift in Sources */,
 				A785B6A1276208BA006A50FC /* CharacterCellView.swift in Sources */,
 				A777F057276CC9D6001D63EC /* DetailIntroView.swift in Sources */,
+				A777F07827709975001D63EC /* BookListView.swift in Sources */,
 				A777F06427707AE7001D63EC /* BookrRepositoryImplementation.swift in Sources */,
 				A7EE93202750EEFD0046488C /* GetAllCharactersUseCase.swift in Sources */,
 				A777F046276B891C001D63EC /* MovieListViewModel.swift in Sources */,
