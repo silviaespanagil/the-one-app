@@ -11,6 +11,7 @@ import Combine
 class BookDataSource {
     
     static let getAllBooksURL: String = "book"
+    static let getBookChaptersURL: String = "chapter"
     
     private let baseURLString: String
     private let session: URLSession
@@ -58,7 +59,7 @@ extension BookDataSource {
     
     func getBookChapterEndpoint(id: String) -> URLRequest {
         
-        let endpoint = "\(baseURLString)\(BookDataSource.getAllBooksURL)/\(id)"
+        let endpoint = "\(baseURLString)\(BookDataSource.getAllBooksURL)/\(id)/\(BookDataSource.getBookChaptersURL)"
         
         let components = URLComponents(string: endpoint)
         
