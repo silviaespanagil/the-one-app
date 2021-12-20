@@ -1,16 +1,16 @@
 //
-//  MovieDataSource.swift
+//  BookDataSource.swift
 //  TheOneApp
 //
-//  Created by Silvia España on 15/12/21.
+//  Created by Silvia España on 20/12/21.
 //
 
 import Foundation
 import Combine
 
-class MovieDataSource {
+class BookDataSource {
     
-    static let getAllMoviesURL: String = "movie"
+    static let getAllBooksURL: String = "book"
     
     private let baseURLString: String
     private let session: URLSession
@@ -21,21 +21,21 @@ class MovieDataSource {
         self.session = session
     }
     
-    func getAllMovies() -> AnyPublisher<ServerBaseArrayResponse<ServerMoviesResponse>, Error> {
+    func getAllBooks() -> AnyPublisher<ServerBaseArrayResponse<ServerBookResponse>, Error> {
         
         let apiManager = APIManager(baseURL: baseURLString, session: session)
         
-        let urlRequest = getAllMoviesEndpoint()
+        let urlRequest = getAllBooksEndpoint()
         
         return apiManager.performRequest(urlRequest: urlRequest)
         
     }
     
-    func getMovieDetail(id: String) -> AnyPublisher<ServerMoviesResponse, Error> {
+    func getBookChapter(id: String) -> AnyPublisher<ServerBookResponse, Error> {
         
         let apiManager = APIManager(baseURL: baseURLString, session: session)
         
-        let urlRequest = getMovieDetailEndpoint(id: id)
+        let urlRequest = getBookChapterEndpoint(id: id)
         
         return apiManager.performRequest(urlRequest: urlRequest)
     }
@@ -43,11 +43,11 @@ class MovieDataSource {
 
 // MARK: Endpoints
 
-extension MovieDataSource {
+extension BookDataSource {
     
-    func getAllMoviesEndpoint() -> URLRequest {
+    func getAllBooksEndpoint() -> URLRequest {
         
-        let endpoint = "\(baseURLString)\(MovieDataSource.getAllMoviesURL)"
+        let endpoint = "\(baseURLString)\(BookDataSource.getAllBooksURL)"
         
         let components = URLComponents(string: endpoint)
         
@@ -56,9 +56,9 @@ extension MovieDataSource {
         return urlRequest
     }
     
-    func getMovieDetailEndpoint(id: String) -> URLRequest {
+    func getBookChapterEndpoint(id: String) -> URLRequest {
         
-        let endpoint = "\(baseURLString)\(MovieDataSource.getAllMoviesURL)/\(id)"
+        let endpoint = "\(baseURLString)\(BookDataSource.getAllBooksURL)/\(id)"
         
         let components = URLComponents(string: endpoint)
         
