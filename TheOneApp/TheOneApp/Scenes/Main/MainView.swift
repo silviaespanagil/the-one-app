@@ -29,7 +29,7 @@ struct MainView: View {
                         MainCellView(name: viewModel.mainTitles[1])
                     } .listRowBackground(ImageItemView(image: viewModel.mainImages[1]))
                     
-                    NavigationLink(destination: MainView(viewModel: MainViewModel())) {
+                    NavigationLink(destination: BookListView(viewModel: BookListViewModel())) {
 
                         MainCellView(name: viewModel.mainTitles[2])
                     } .listRowBackground(ImageItemView(image: viewModel.mainImages[2]))
