@@ -19,6 +19,12 @@ struct BookListView: View {
                 
                 List {
                     
+                    if viewModel.showProgressView {
+                        
+                        LoadingAnimationView()
+                            .listRowBackground(Color("AppDarkGreen"))
+                    }
+                    
                     ForEach(viewModel.books) { book in
                         
                         NavigationLink(destination:ChapterListView(viewModel: ChapterListViewModel(book: book))) {
