@@ -69,6 +69,8 @@
 		A777F09C2770E973001D63EC /* ChapterRepositoryImplementationUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F09B2770E973001D63EC /* ChapterRepositoryImplementationUnitTest.swift */; };
 		A777F09F2770F0C9001D63EC /* GetAllMoviesUseCaseUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F09E2770F0C9001D63EC /* GetAllMoviesUseCaseUnitTest.swift */; };
 		A777F0A12770F233001D63EC /* GetMovieDetailUseCaseUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F0A02770F233001D63EC /* GetMovieDetailUseCaseUnitTest.swift */; };
+		A777F0A32771C69C001D63EC /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F0A22771C69C001D63EC /* Quote.swift */; };
+		A777F0A52771C707001D63EC /* ServerQuoteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F0A42771C707001D63EC /* ServerQuoteResponse.swift */; };
 		A785B6A1276208BA006A50FC /* CharacterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6A0276208BA006A50FC /* CharacterCellView.swift */; };
 		A785B6A527620D13006A50FC /* RenderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B6A427620D13006A50FC /* RenderImage.swift */; };
 		A785B6BB27623740006A50FC /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A785B6BA27623740006A50FC /* Lottie */; };
@@ -181,6 +183,8 @@
 		A777F09B2770E973001D63EC /* ChapterRepositoryImplementationUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterRepositoryImplementationUnitTest.swift; sourceTree = "<group>"; };
 		A777F09E2770F0C9001D63EC /* GetAllMoviesUseCaseUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMoviesUseCaseUnitTest.swift; sourceTree = "<group>"; };
 		A777F0A02770F233001D63EC /* GetMovieDetailUseCaseUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieDetailUseCaseUnitTest.swift; sourceTree = "<group>"; };
+		A777F0A22771C69C001D63EC /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		A777F0A42771C707001D63EC /* ServerQuoteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerQuoteResponse.swift; sourceTree = "<group>"; };
 		A785B6A0276208BA006A50FC /* CharacterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellView.swift; sourceTree = "<group>"; };
 		A785B6A427620D13006A50FC /* RenderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderImage.swift; sourceTree = "<group>"; };
 		A785B6C927637876006A50FC /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
@@ -623,6 +627,7 @@
 				A777F023276A4FEB001D63EC /* ServerMoviesResponse.swift */,
 				A777F05C27707A14001D63EC /* ServerBookResponse.swift */,
 				A777F0832770B2D8001D63EC /* ServerChapterResponse.swift */,
+				A777F0A42771C707001D63EC /* ServerQuoteResponse.swift */,
 			);
 			path = ServerEntities;
 			sourceTree = "<group>";
@@ -634,6 +639,7 @@
 				A777F021276A4F06001D63EC /* Movies.swift */,
 				A777F05A276CE958001D63EC /* Book.swift */,
 				A777F0812770B2B3001D63EC /* Chapter.swift */,
+				A777F0A22771C69C001D63EC /* Quote.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -844,10 +850,12 @@
 				A777F07E2770AE31001D63EC /* ChapterListViewModel.swift in Sources */,
 				A777F0822770B2B3001D63EC /* Chapter.swift in Sources */,
 				A7EE93262750F0CC0046488C /* CharacterListView.swift in Sources */,
+				A777F0A32771C69C001D63EC /* Quote.swift in Sources */,
 				A777F041276B7454001D63EC /* GetMovieDetailUseCase.swift in Sources */,
 				A777F06027707AC4001D63EC /* BookDataSource.swift in Sources */,
 				A777F08A2770B631001D63EC /* ChapterRepository.swift in Sources */,
 				A777F067277082CE001D63EC /* GetAllBooksUseCase.swift in Sources */,
+				A777F0A52771C707001D63EC /* ServerQuoteResponse.swift in Sources */,
 				A777F027276A5101001D63EC /* MovieDataSource.swift in Sources */,
 				A785B6FE2768A7EB006A50FC /* MainViewModel.swift in Sources */,
 				A777F0132769086D001D63EC /* LoadingAnimationView.swift in Sources */,
