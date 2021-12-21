@@ -12,7 +12,14 @@ import SwiftUI
 class MovieDetailViewModel: ObservableObject {
     
     @Published public private(set) var movie: Movie
+    
+    @Published public private(set) var quotes: [Quote] = []
+    
     @Published public private(set) var showProgressView = false
+    
+    @Published public private(set) var showQuote = false
+    
+    var dialogQuote: String = ""
     
     let release: String
     let tomatometer: String
@@ -43,6 +50,8 @@ class MovieDetailViewModel: ObservableObject {
         
         cornerRadius = 50
         height = 200
+        
+        getMovieQuote()
     }
     
     func getMovieDetail() {
@@ -66,5 +75,44 @@ class MovieDetailViewModel: ObservableObject {
                 
                 self.movie = movie
             })
+    }
+    
+    func getMovieQuote() {
+        
+        cancellable = GetMovieQuotesUseCase().execute(id: movie.id)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                
+                switch completion {
+                case .finished:
+                    break
+                case .failure:
+                    break
+                }
+                
+            }, receiveValue: { (quotes: [Quote]) in
+                
+                self.quotes = quotes
+                self.getQuote()
+            })
+    }
+    
+    func getQuote() {
+        
+        let quotesSize = quotes.count
+        
+        if quotesSize > 0 {
+            
+            showQuote = true
+            
+            let randomIndexNumber = Int.random(in: 1..<quotesSize)
+            
+            dialogQuote = quotes[randomIndexNumber].dialog.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            if dialogQuote.isEmpty {
+                
+                getQuote()
+            }
+        }
     }
 }
