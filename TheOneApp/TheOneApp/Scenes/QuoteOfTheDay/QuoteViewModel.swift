@@ -12,10 +12,10 @@ import Combine
 class QuoteViewModel: ObservableObject {
     
     @Published public private(set) var quotes: [Quote] = []
+
+    @Published public private(set) var showProgressView = false
     
     var dialogQuote: String = ""
-    
-    @Published public private(set) var showProgressView = false
     
     private var cancellable: AnyCancellable?
     

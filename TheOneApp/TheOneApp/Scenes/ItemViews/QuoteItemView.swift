@@ -11,11 +11,15 @@ struct QuoteItemView: View {
     
     var image: String
     var quote: String
+    var colour: Color
+    var font: Font
     
-    init(quote: String) {
+    init(quote: String, colour: Color, font: Font) {
         
         self.image = "quote.bubble"
         self.quote = quote
+        self.colour = colour
+        self.font = font
     }
     
     var body: some View {
@@ -25,8 +29,10 @@ struct QuoteItemView: View {
             Image(systemName: image)
             
             Text("\"\(quote)\"")
-                .font(.title).padding()
-        }.foregroundColor(Color("AppSalmon"))
+                .font(font)
+                .italic()
+                .padding()
+        }.foregroundColor(colour)
     }
 }
 

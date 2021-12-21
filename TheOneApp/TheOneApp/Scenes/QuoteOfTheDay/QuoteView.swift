@@ -19,7 +19,7 @@ struct QuoteView: View {
                 .ignoresSafeArea()
                 .overlay(
                     
-                    QuoteItemView(quote: "\(viewModel.dialogQuote)")
+                    QuoteItemView(quote: "\(viewModel.dialogQuote)", colour: Color("AppSalmon"), font: .title)
                 )
         } .onAppear {
             

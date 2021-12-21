@@ -68,7 +68,7 @@ extension QuoteDataSource {
     
     func getCharacterQuotesEndpoint(id: String) -> URLRequest {
         
-        let endpoint = "\(baseURLString)\(QuoteDataSource.getAllQuotesURL)/\(id)/\(QuoteDataSource.getCharacterURL)"
+        let endpoint = "\(baseURLString)\(QuoteDataSource.getCharacterURL)/\(id)/\(QuoteDataSource.getAllQuotesURL)"
         
         let components = URLComponents(string: endpoint)
         
@@ -79,7 +79,7 @@ extension QuoteDataSource {
     
     func getMovieQuotesEndpoint(id: String) -> URLRequest {
         
-        let endpoint = "\(baseURLString)\(QuoteDataSource.getAllQuotesURL)/\(id)/\(QuoteDataSource.getMovieURL)"
+        let endpoint = "\(baseURLString)\(QuoteDataSource.getMovieURL)/\(id)/\(QuoteDataSource.getAllQuotesURL)"
         
         let components = URLComponents(string: endpoint)
         

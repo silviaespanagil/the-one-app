@@ -43,6 +43,14 @@ struct MovieDetailView: View {
                                 DetailItemView(title: viewModel.oscarNomination, value: String(viewModel.movie.oscarNominations))
                                 
                                 DetailItemView(title: viewModel.oscarWin, value: String(viewModel.movie.oscarWins))
+                                
+                                if viewModel.showQuote {
+                                    
+                                    Spacer()
+                                    
+                                    QuoteItemView(quote: viewModel.dialogQuote, colour: Color("AppDarkGreen"), font: .body)
+                                        .padding(.bottom)
+                                }
                             }
                             .frame(width: detailGeo.size.width * 1, height: detailGeo.size.height * 0.7, alignment: .top)
                             .background(Color("AppSalmon")).ignoresSafeArea()
