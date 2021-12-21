@@ -17,7 +17,7 @@ class GetAllQuotesUseCase {
         self.repository = repository
     }
     
-    func execute(id: String) -> AnyPublisher<[Quote], Error> {
+    func execute() -> AnyPublisher<[Quote], Error> {
         
         repository.getAllQuotes()
     }
