@@ -16,6 +16,12 @@
 		A747FAD5274FE75F00355FE0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747FAD4274FE75F00355FE0 /* APIManager.swift */; };
 		A747FAD8274FEA0900355FE0 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747FAD7274FEA0900355FE0 /* HTTPError.swift */; };
 		A764BC9F2771F8E10095F0E3 /* QuoteItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764BC9E2771F8E10095F0E3 /* QuoteItemView.swift */; };
+		A764BCA2277216870095F0E3 /* MockQuoteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764BCA1277216870095F0E3 /* MockQuoteTest.swift */; };
+		A764BCA6277216C40095F0E3 /* QuoteDataSourceUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764BCA5277216C40095F0E3 /* QuoteDataSourceUnitTest.swift */; };
+		A764BCA8277216D90095F0E3 /* QuoteRepositoryImplementationUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764BCA7277216D90095F0E3 /* QuoteRepositoryImplementationUnitTest.swift */; };
+		A764BCAC277222580095F0E3 /* GetMovieQuotesUseCaseUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764BCAB277222580095F0E3 /* GetMovieQuotesUseCaseUnitTest.swift */; };
+		A764BCAE2772226E0095F0E3 /* GetAllQuotesUseCaseUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764BCAD2772226E0095F0E3 /* GetAllQuotesUseCaseUnitTest.swift */; };
+		A764BCB02772228D0095F0E3 /* GetCharacterQuoteUseCaseUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764BCAF2772228D0095F0E3 /* GetCharacterQuoteUseCaseUnitTest.swift */; };
 		A777F00D276901F3001D63EC /* DetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F00C276901F3001D63EC /* DetailItemView.swift */; };
 		A777F0122769086D001D63EC /* loadingAnimationLottieJson.json in Resources */ = {isa = PBXBuildFile; fileRef = A777F00F2769086D001D63EC /* loadingAnimationLottieJson.json */; };
 		A777F0132769086D001D63EC /* LoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F0102769086D001D63EC /* LoadingAnimationView.swift */; };
@@ -139,6 +145,12 @@
 		A747FAD4274FE75F00355FE0 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		A747FAD7274FEA0900355FE0 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 		A764BC9E2771F8E10095F0E3 /* QuoteItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteItemView.swift; sourceTree = "<group>"; };
+		A764BCA1277216870095F0E3 /* MockQuoteTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockQuoteTest.swift; sourceTree = "<group>"; };
+		A764BCA5277216C40095F0E3 /* QuoteDataSourceUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDataSourceUnitTest.swift; sourceTree = "<group>"; };
+		A764BCA7277216D90095F0E3 /* QuoteRepositoryImplementationUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRepositoryImplementationUnitTest.swift; sourceTree = "<group>"; };
+		A764BCAB277222580095F0E3 /* GetMovieQuotesUseCaseUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieQuotesUseCaseUnitTest.swift; sourceTree = "<group>"; };
+		A764BCAD2772226E0095F0E3 /* GetAllQuotesUseCaseUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllQuotesUseCaseUnitTest.swift; sourceTree = "<group>"; };
+		A764BCAF2772228D0095F0E3 /* GetCharacterQuoteUseCaseUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharacterQuoteUseCaseUnitTest.swift; sourceTree = "<group>"; };
 		A777F00C276901F3001D63EC /* DetailItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemView.swift; sourceTree = "<group>"; };
 		A777F00F2769086D001D63EC /* loadingAnimationLottieJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingAnimationLottieJson.json; sourceTree = "<group>"; };
 		A777F0102769086D001D63EC /* LoadingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingAnimationView.swift; sourceTree = "<group>"; };
@@ -343,6 +355,26 @@
 			path = Enumerations;
 			sourceTree = "<group>";
 		};
+		A764BCA0277216730095F0E3 /* QuoteTest */ = {
+			isa = PBXGroup;
+			children = (
+				A764BCA1277216870095F0E3 /* MockQuoteTest.swift */,
+				A764BCA5277216C40095F0E3 /* QuoteDataSourceUnitTest.swift */,
+				A764BCA7277216D90095F0E3 /* QuoteRepositoryImplementationUnitTest.swift */,
+			);
+			path = QuoteTest;
+			sourceTree = "<group>";
+		};
+		A764BCAA2772223F0095F0E3 /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				A764BCAB277222580095F0E3 /* GetMovieQuotesUseCaseUnitTest.swift */,
+				A764BCAD2772226E0095F0E3 /* GetAllQuotesUseCaseUnitTest.swift */,
+				A764BCAF2772228D0095F0E3 /* GetCharacterQuoteUseCaseUnitTest.swift */,
+			);
+			path = Quotes;
+			sourceTree = "<group>";
+		};
 		A777F00B276901D6001D63EC /* ItemViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +426,7 @@
 		A777F01C276A4756001D63EC /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				A764BCAA2772223F0095F0E3 /* Quotes */,
 				A777F09D2770EF52001D63EC /* Movies */,
 				A777F0902770DF7A001D63EC /* Books */,
 				A777F08F2770DF68001D63EC /* Characters */,
@@ -612,6 +645,7 @@
 		A785B6D42763B5B4006A50FC /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				A764BCA0277216730095F0E3 /* QuoteTest */,
 				A777F0962770E614001D63EC /* ChapterTest */,
 				A777F06C27708715001D63EC /* BookTest */,
 				A777F030276B549F001D63EC /* MovieTest */,
@@ -966,6 +1000,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A764BCB02772228D0095F0E3 /* GetCharacterQuoteUseCaseUnitTest.swift in Sources */,
 				A777F036276B66CC001D63EC /* MovieRepositoryImplementationUnitTest.swift in Sources */,
 				A785B6DA2763B6B8006A50FC /* CharacterDataSourceUnitTest.swift in Sources */,
 				A785B6DC2763B87E006A50FC /* CharacterRepositoryImplementationUnitTest.swift in Sources */,
@@ -978,17 +1013,22 @@
 				A777F01B276A4228001D63EC /* ServerCharacterResponseUnitTest.swift in Sources */,
 				A777F01E276A47A5001D63EC /* GetCharacterDetailUseCaseUnitTest.swift in Sources */,
 				A777F0922770DFA4001D63EC /* GetAllBooksUseCaseUnitTest.swift in Sources */,
+				A764BCAC277222580095F0E3 /* GetMovieQuotesUseCaseUnitTest.swift in Sources */,
 				A777F0A12770F233001D63EC /* GetMovieDetailUseCaseUnitTest.swift in Sources */,
 				A777F0942770E56A001D63EC /* GetChaptersByBookUseCaseUnitTest.swift in Sources */,
 				A785B6D82763B611006A50FC /* MockCharacterRepository.swift in Sources */,
 				A777F032276B54BF001D63EC /* MockMovieRepository.swift in Sources */,
 				A777F06F27708737001D63EC /* MockBookRepository.swift in Sources */,
 				A785B6D32763B583006A50FC /* MockURLProtocol.swift in Sources */,
+				A764BCA8277216D90095F0E3 /* QuoteRepositoryImplementationUnitTest.swift in Sources */,
 				A777F06B277085E9001D63EC /* ServerBookResponseUnitTest.swift in Sources */,
 				A777F0982770E632001D63EC /* MockChapterRepository.swift in Sources */,
 				A777F0712770874A001D63EC /* BookDataSourceUnitTest.swift in Sources */,
 				A777F034276B5633001D63EC /* MovieDataSourceUnitTest.swift in Sources */,
+				A764BCA2277216870095F0E3 /* MockQuoteTest.swift in Sources */,
+				A764BCAE2772226E0095F0E3 /* GetAllQuotesUseCaseUnitTest.swift in Sources */,
 				A777F09F2770F0C9001D63EC /* GetAllMoviesUseCaseUnitTest.swift in Sources */,
+				A764BCA6277216C40095F0E3 /* QuoteDataSourceUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
