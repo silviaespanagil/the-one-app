@@ -34,7 +34,7 @@ struct MainView: View {
                         MainCellView(name: viewModel.mainTitles[2])
                     } .listRowBackground(ImageItemView(image: viewModel.mainImages[2]))
                     
-                    NavigationLink(destination: MainView(viewModel: MainViewModel())) {
+                    NavigationLink(destination: QuoteView(viewModel: QuoteViewModel())) {
 
                         MainCellView(name: viewModel.mainTitles[3])
                     } .listRowBackground(ImageItemView(image: viewModel.mainImages[3]))
