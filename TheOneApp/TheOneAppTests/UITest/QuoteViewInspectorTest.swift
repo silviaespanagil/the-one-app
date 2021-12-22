@@ -41,7 +41,9 @@ class QuoteViewInspectorTest: XCTestCase {
             
             let quoteText = try! view.vStack(0).color(0).overlay(0).view(QuoteItemView.self,0).vStack(0).text(1).string()
             
-            XCTAssertNotNil(quoteText, "")
+            XCTAssertNotNil(quoteText)
+            //TODO: actually check
+//            XCTAssertEqual(quoteText, sut.viewModel.dialogQuote)
         }
         
         ViewHosting.host(view: sut)
