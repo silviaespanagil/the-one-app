@@ -11,6 +11,8 @@ struct QuoteView: View {
     
     @StateObject var viewModel: QuoteViewModel
     
+    internal let inspection = Inspection<Self>()
+    
     var body: some View {
         
         VStack {
@@ -24,6 +26,10 @@ struct QuoteView: View {
         } .onAppear {
             
             viewModel.getAllQuotes()
+        }
+        .onReceive(inspection.notice) {
+            
+            self.inspection.visit(self, $0)
         }
     }
 }
