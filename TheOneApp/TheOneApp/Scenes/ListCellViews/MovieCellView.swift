@@ -12,6 +12,8 @@ struct MovieCellView: View {
     var name: String
     var image: String
     
+    internal let inspection = Inspection<Self>()
+    
     init(name: String, image: String) {
         
         self.name = name
@@ -21,6 +23,7 @@ struct MovieCellView: View {
     var body: some View {
         
         VStack {
+            
             Image("").renderImage(url: URL(string: image)!)
             .frame(maxHeight: 150)
             .shadow(color: Color("AppMediumGreen"), radius: 3, x: 3, y: 0)
@@ -34,6 +37,9 @@ struct MovieCellView: View {
                         .textCase(.uppercase)
                         .padding()
                         )
+        }.onReceive(inspection.notice) {
+            
+            self.inspection.visit(self, $0)
         }
     }
 }

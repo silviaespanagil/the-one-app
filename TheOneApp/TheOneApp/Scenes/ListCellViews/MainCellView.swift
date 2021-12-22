@@ -11,6 +11,8 @@ struct MainCellView: View {
     
     let name: String
     
+    internal let inspection = Inspection<Self>()
+    
     init(name: String) {
         
         self.name = name
@@ -27,6 +29,9 @@ struct MainCellView: View {
                 .textCase(.uppercase)
                 .frame(maxWidth: .infinity)
                 .foregroundColor(Color("AppWhite"))
+        }.onReceive(inspection.notice) {
+            
+            self.inspection.visit(self, $0)
         }
     }
 }

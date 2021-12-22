@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct CharacterCellView: View {
     
@@ -13,6 +14,8 @@ struct CharacterCellView: View {
     let race: String?
     let name: String
     let image: String
+    
+    internal let inspection = Inspection<Self>()
     
     init(id: String, race: String?, name: String, image: String) {
         
@@ -43,6 +46,9 @@ struct CharacterCellView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .font(.footnote)
             }
+        }.onReceive(inspection.notice) {
+            
+            self.inspection.visit(self, $0)
         }
     }
 }
