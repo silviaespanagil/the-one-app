@@ -22,6 +22,8 @@
 		A764BCAC277222580095F0E3 /* GetMovieQuotesUseCaseUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764BCAB277222580095F0E3 /* GetMovieQuotesUseCaseUnitTest.swift */; };
 		A764BCAE2772226E0095F0E3 /* GetAllQuotesUseCaseUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764BCAD2772226E0095F0E3 /* GetAllQuotesUseCaseUnitTest.swift */; };
 		A764BCB02772228D0095F0E3 /* GetCharacterQuoteUseCaseUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764BCAF2772228D0095F0E3 /* GetCharacterQuoteUseCaseUnitTest.swift */; };
+		A764BCB3277227BB0095F0E3 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = A764BCB2277227BB0095F0E3 /* ViewInspector */; };
+		A764BCB627722B190095F0E3 /* CharacterListViewInspectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764BCB527722B190095F0E3 /* CharacterListViewInspectorTest.swift */; };
 		A777F00D276901F3001D63EC /* DetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F00C276901F3001D63EC /* DetailItemView.swift */; };
 		A777F0122769086D001D63EC /* loadingAnimationLottieJson.json in Resources */ = {isa = PBXBuildFile; fileRef = A777F00F2769086D001D63EC /* loadingAnimationLottieJson.json */; };
 		A777F0132769086D001D63EC /* LoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777F0102769086D001D63EC /* LoadingAnimationView.swift */; };
@@ -151,6 +153,7 @@
 		A764BCAB277222580095F0E3 /* GetMovieQuotesUseCaseUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieQuotesUseCaseUnitTest.swift; sourceTree = "<group>"; };
 		A764BCAD2772226E0095F0E3 /* GetAllQuotesUseCaseUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllQuotesUseCaseUnitTest.swift; sourceTree = "<group>"; };
 		A764BCAF2772228D0095F0E3 /* GetCharacterQuoteUseCaseUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharacterQuoteUseCaseUnitTest.swift; sourceTree = "<group>"; };
+		A764BCB527722B190095F0E3 /* CharacterListViewInspectorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewInspectorTest.swift; sourceTree = "<group>"; };
 		A777F00C276901F3001D63EC /* DetailItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemView.swift; sourceTree = "<group>"; };
 		A777F00F2769086D001D63EC /* loadingAnimationLottieJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingAnimationLottieJson.json; sourceTree = "<group>"; };
 		A777F0102769086D001D63EC /* LoadingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingAnimationView.swift; sourceTree = "<group>"; };
@@ -257,6 +260,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A764BCB3277227BB0095F0E3 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +325,7 @@
 		A747FAB8274FB17000355FE0 /* TheOneAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				A764BCB427722AFC0095F0E3 /* UITest */,
 				A777F01C276A4756001D63EC /* UseCases */,
 				A777F015276A3E73001D63EC /* Entities */,
 				A785B6D42763B5B4006A50FC /* Repositories */,
@@ -373,6 +378,14 @@
 				A764BCAF2772228D0095F0E3 /* GetCharacterQuoteUseCaseUnitTest.swift */,
 			);
 			path = Quotes;
+			sourceTree = "<group>";
+		};
+		A764BCB427722AFC0095F0E3 /* UITest */ = {
+			isa = PBXGroup;
+			children = (
+				A764BCB527722B190095F0E3 /* CharacterListViewInspectorTest.swift */,
+			);
+			path = UITest;
 			sourceTree = "<group>";
 		};
 		A777F00B276901D6001D63EC /* ItemViews */ = {
@@ -822,6 +835,9 @@
 				A747FAB7274FB17000355FE0 /* PBXTargetDependency */,
 			);
 			name = TheOneAppTests;
+			packageProductDependencies = (
+				A764BCB2277227BB0095F0E3 /* ViewInspector */,
+			);
 			productName = TheOneAppTests;
 			productReference = A747FAB5274FB17000355FE0 /* TheOneAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -878,6 +894,7 @@
 			mainGroup = A747FA9C274FB16F00355FE0;
 			packageReferences = (
 				A785B6B927623740006A50FC /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				A764BCB1277227BB0095F0E3 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 			);
 			productRefGroup = A747FAA6274FB16F00355FE0 /* Products */;
 			projectDirPath = "";
@@ -1004,6 +1021,7 @@
 				A777F036276B66CC001D63EC /* MovieRepositoryImplementationUnitTest.swift in Sources */,
 				A785B6DA2763B6B8006A50FC /* CharacterDataSourceUnitTest.swift in Sources */,
 				A785B6DC2763B87E006A50FC /* CharacterRepositoryImplementationUnitTest.swift in Sources */,
+				A764BCB627722B190095F0E3 /* CharacterListViewInspectorTest.swift in Sources */,
 				A777F020276A48C9001D63EC /* GetAllCharactersUseCaseUnitTest.swift in Sources */,
 				A777F09A2770E95D001D63EC /* ChapterDataSourceUnitTest.swift in Sources */,
 				A777F02F276B5041001D63EC /* ServerMoviesResponseUnitTest.swift in Sources */,
@@ -1377,6 +1395,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A764BCB1277227BB0095F0E3 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
 		A785B6B927623740006A50FC /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -1388,6 +1414,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A764BCB2277227BB0095F0E3 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A764BCB1277227BB0095F0E3 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
 		A785B6BA27623740006A50FC /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A785B6B927623740006A50FC /* XCRemoteSwiftPackageReference "lottie-ios" */;
