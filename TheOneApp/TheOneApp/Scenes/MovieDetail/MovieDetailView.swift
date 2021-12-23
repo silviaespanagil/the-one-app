@@ -11,6 +11,8 @@ struct MovieDetailView: View {
     
     @StateObject var viewModel: MovieDetailViewModel
     
+    internal let inspection = Inspection<Self>()
+    
     var body: some View {
         
         VStack {
@@ -58,6 +60,9 @@ struct MovieDetailView: View {
                         }
                     )
             }
+        }.onReceive(inspection.notice) {
+            
+            self.inspection.visit(self, $0)
         }
     }
 }
