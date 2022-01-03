@@ -15,12 +15,10 @@ extension CharacterCellView: Inspectable { }
 class CharacterCellViewInspectorTest: XCTestCase {
     
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
         super.setUp()
     }
     
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
@@ -29,31 +27,21 @@ class CharacterCellViewInspectorTest: XCTestCase {
     
     func testNameSetUp() {
         
-        let exp = sut.inspection.inspect { view in
-            
-            // When
-            let nameLabel = try! view.hStack(0).vStack(1).text(0).string()
-            
-            // Then
-            XCTAssertEqual(self.sut.name, nameLabel)
-        }
+        // When
+        let tag = "characterName"
+        let nameLabel = try! sut.inspect().find(viewWithTag: tag).text().string()
         
-        ViewHosting.host(view: sut)
-        wait(for: [exp], timeout: 2)
+        // Then
+        XCTAssertEqual(self.sut.name, nameLabel)
     }
     
     func testRaceSetUp() {
         
-        let exp = sut.inspection.inspect { view in
-            
-            // When
-            let raceLabel = try! view.hStack(0).vStack(1).text(1).string()
-            
-            // Then
-            XCTAssertEqual(self.sut.race, raceLabel)
-        }
+        // When
+        let tag = "characterRace"
+        let raceLabel = try! sut.inspect().find(viewWithTag: tag).text().string()
         
-        ViewHosting.host(view: sut)
-        wait(for: [exp], timeout: 2)
+        // Then
+        XCTAssertEqual(self.sut.race, raceLabel)
     }
 }
