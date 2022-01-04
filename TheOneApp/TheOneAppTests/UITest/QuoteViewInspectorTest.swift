@@ -17,13 +17,11 @@ extension QuoteItemView: Inspectable { }
 class QuoteViewInspectorTest: XCTestCase {
     
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
         
         try super.setUpWithError()
     }
     
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         
         try super.tearDownWithError()
     }
@@ -31,22 +29,14 @@ class QuoteViewInspectorTest: XCTestCase {
     func testQuoteText() throws {
         
         // Given
-        
         let viewModel = QuoteViewModel()
+        let tag = "quoteText"
         let sut =  QuoteView(viewModel: viewModel)
         
-        let exp = sut.inspection.inspect { view in
-            
-            // When
-            
-            let quoteText = try! view.vStack(0).color(0).overlay(0).view(QuoteItemView.self,0).vStack(0).text(1).string()
-            //TODO: Make this pass
-            XCTAssertNotNil(quoteText)
-//            XCTAssertEqual(quoteText, sut.viewModel.dialogQuote)
-        }
-        
-        ViewHosting.host(view: sut)
-        wait(for: [exp], timeout: 2)
+        // When
+        let quoteText = try! sut.inspect().find(viewWithTag: tag).text().string()
+        //TODO: Make this pass
+        XCTAssertNotNil(quoteText)
     }
 }
 

@@ -56,5 +56,4 @@ class QuoteViewModel: ObservableObject {
             getQuote()
         }
     }
-    
 }
