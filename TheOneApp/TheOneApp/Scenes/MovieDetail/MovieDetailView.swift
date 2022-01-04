@@ -11,8 +11,6 @@ struct MovieDetailView: View {
     
     @StateObject var viewModel: MovieDetailViewModel
     
-    internal let inspection = Inspection<Self>()
-    
     var body: some View {
         
         VStack {
@@ -25,26 +23,32 @@ struct MovieDetailView: View {
                         
                         VStack {
                             
-                            DetailIntroView(image: viewModel.movie.movieImage, name: viewModel.movie.name, width: detailGeo.size.width*0.85, height: viewModel.height)
+                            DetailIntroView(image: viewModel.movie.movieImage, name: viewModel.movie.name, width: detailGeo.size.width*0.85, height: viewModel.height).tag("movieIntro")
                                 .frame(height: detailGeo.size.height * 0.40, alignment: .bottom)
                             
                             VStack {
                                 
-                                Text("\(viewModel.release)\(String(viewModel.movie.releaseDate))")
+                                Text("\(viewModel.release)\(String(viewModel.movie.releaseDate))").tag("releaseDate")
                                     .foregroundColor(Color("AppDarkGreen"))
                                     .padding()
                                 
                                 DetailItemView(title: viewModel.tomatometer, value: String(viewModel.movie.rottenTomatoesScore))
+                                    .tag("tomatometer")
                                 
                                 DetailItemView(title: viewModel.runtime, value: "\(String(viewModel.movie.runtime))\(" minutes")")
+                                    .tag("runtime")
                                 
                                 DetailItemView(title: viewModel.budget, value: "\(String(viewModel.movie.budget))\(" millions")")
+                                    .tag("budget")
                                 
                                 DetailItemView(title: viewModel.revenue, value: "\(String(viewModel.movie.revenue))\(" millions")")
+                                    .tag("revenue")
                                 
                                 DetailItemView(title: viewModel.oscarNomination, value: String(viewModel.movie.oscarNominations))
+                                    .tag("oscarNomination")
                                 
                                 DetailItemView(title: viewModel.oscarWin, value: String(viewModel.movie.oscarWins))
+                                    .tag("oscarWins")
                                 
                                 if viewModel.showQuote {
                                     
@@ -60,9 +64,6 @@ struct MovieDetailView: View {
                         }
                     )
             }
-        }.onReceive(inspection.notice) {
-            
-            self.inspection.visit(self, $0)
         }
     }
 }
