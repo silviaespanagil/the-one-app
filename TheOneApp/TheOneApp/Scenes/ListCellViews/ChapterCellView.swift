@@ -27,6 +27,7 @@ struct ChapterCellView: View {
                 Text(chapterName)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
+                    .tag("chapterName")
             }
         }
     }

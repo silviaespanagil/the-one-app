@@ -10,7 +10,7 @@ import SwiftUI
 struct MainCellView: View {
     
     let name: String
-    
+  
     init(name: String) {
         
         self.name = name
@@ -27,6 +27,7 @@ struct MainCellView: View {
                 .textCase(.uppercase)
                 .frame(maxWidth: .infinity)
                 .foregroundColor(Color("AppWhite"))
+                .tag("menuTitle")
         }
     }
 }

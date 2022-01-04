@@ -21,6 +21,7 @@ struct MovieCellView: View {
     var body: some View {
         
         VStack {
+            
             Image("").renderImage(url: URL(string: image)!)
             .frame(maxHeight: 150)
             .shadow(color: Color("AppMediumGreen"), radius: 3, x: 3, y: 0)
@@ -33,6 +34,7 @@ struct MovieCellView: View {
                         .tracking(5)
                         .textCase(.uppercase)
                         .padding()
+                        .tag("movieName")
                         )
         }
     }

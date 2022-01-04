@@ -32,6 +32,7 @@ struct DetailItemView: View {
                 VStack {
                     
                     Text(value)
+                        .tag("movieInfoDetail")
                 }
             }.padding(EdgeInsets(top: 0, leading: 15, bottom: 15, trailing: 15))
                 .foregroundColor(Color("AppDarkGreen"))

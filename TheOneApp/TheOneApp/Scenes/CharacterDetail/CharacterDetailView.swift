@@ -31,12 +31,16 @@ struct CharacterDetailView: View {
                                 Text(viewModel.character.race?.description ?? viewModel.unknownRace)
                                     .foregroundColor(Color("AppDarkGreen"))
                                     .padding()
+                                    .tag("race")
                                 
                                 DetailItemView(title: viewModel.born, value: viewModel.character.birth)
+                                    .tag("birth")
                                 
                                 DetailItemView(title: viewModel.death, value: viewModel.character.death)
+                                    .tag("death")
                                 
                                 DetailItemView(title: viewModel.partner, value: viewModel.character.spouse)
+                                    .tag("spouse")
 
                                 if let wikiURL = viewModel.character.wikiURL, !wikiURL.isEmpty {
                                     HStack {
@@ -59,6 +63,7 @@ struct CharacterDetailView: View {
                                     
                                     QuoteItemView(quote: viewModel.dialogQuote, colour: Color("AppDarkGreen"), font: .body)
                                         .padding(.bottom)
+                                       
                                 }
                             }
                             .frame(width: detailGeo.size.width * 1, height: detailGeo.size.height * 0.7, alignment: .top)

@@ -35,14 +35,16 @@ struct CharacterListView: View {
                                 
                                 Text(race)
                                     .tag(race)
+
                             })
-                        }.onChange(of: selection) { _ in
-                            
-                            viewModel.sortByRace(selection)
-                        }
+                        }.tag("RaceFilter")
+                            .onChange(of: selection) { _ in
+                                
+                                viewModel.sortByRace(selection)
+                            }
                     } .padding(.trailing)
-                        
-                }.tag("RaceFilter")
+                    
+                }
             }
             
             List {
@@ -63,14 +65,14 @@ struct CharacterListView: View {
             }
         }.tag("CharacterListWrapper")
             .onReceive(inspection.notice) {self.inspection.visit(self, $0)}
-        .onAppear {
-            
-            if viewModel.characters.isEmpty {
+            .onAppear {
                 
-                viewModel.getAllCharacters(page: 1)
-                self.didAppear?(self)
-            }
-        }.background(Color("AppDarkGreen").ignoresSafeArea())
+                if viewModel.characters.isEmpty {
+                    
+                    viewModel.getAllCharacters(page: 1)
+                    self.didAppear?(self)
+                }
+            }.background(Color("AppDarkGreen").ignoresSafeArea())
     }
 }
 
@@ -83,10 +85,10 @@ struct CharacterListView_Previews: PreviewProvider {
 }
 
 internal final class Inspection<V> {
-
+    
     let notice = PassthroughSubject<UInt, Never>()
     var callbacks = [UInt: (V) -> Void]()
-
+    
     func visit(_ view: V, _ line: UInt) {
         if let callback = callbacks.removeValue(forKey: line) {
             callback(view)

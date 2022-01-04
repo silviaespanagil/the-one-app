@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct CharacterCellView: View {
     
@@ -39,9 +40,11 @@ struct CharacterCellView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .font(.title2)
                     .padding(.bottom, 10)
+                    .tag("characterName")
                 Text(race ?? "")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .font(.footnote)
+                    .tag("characterRace")
             }
         }
     }

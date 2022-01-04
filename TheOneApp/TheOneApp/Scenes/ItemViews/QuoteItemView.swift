@@ -32,6 +32,7 @@ struct QuoteItemView: View {
                 .font(font)
                 .italic()
                 .padding()
+                .tag("quoteText")
         }.foregroundColor(colour)
     }
 }
