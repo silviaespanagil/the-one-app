@@ -40,6 +40,7 @@ struct DetailIntroView: View {
                 .tracking(5)
                 .textCase(.uppercase)
                 .fixedSize(horizontal: false, vertical: true)
+                .tag("detailIntroText")
         }
     }
 }
