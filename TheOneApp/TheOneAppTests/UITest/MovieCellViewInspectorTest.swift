@@ -15,12 +15,10 @@ extension MovieCellView: Inspectable { }
 class MovieCellViewInspectorTest: XCTestCase {
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
         super.setUp()
     }
     
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
@@ -29,17 +27,11 @@ class MovieCellViewInspectorTest: XCTestCase {
 
     func testMovieNameSetUp() throws {
         
-        let exp = sut.inspection.inspect { view in
-            
-            // When
-            let movieNameLabel = try! view.vStack(0).image(0).overlay(1).text(0).string()
-            
-            // Then
-            XCTAssertEqual(self.sut.name, movieNameLabel)
-        }
+        // When
+        let label = "movieName"
+        let movieNameLabel = try! sut.inspect().find(viewWithTag: label).text().string()
         
-        ViewHosting.host(view: sut)
-        wait(for: [exp], timeout: 2)
+        // Then
+        XCTAssertEqual(self.sut.name, movieNameLabel)
     }
-
 }

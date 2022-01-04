@@ -12,8 +12,6 @@ struct MovieCellView: View {
     var name: String
     var image: String
     
-    internal let inspection = Inspection<Self>()
-    
     init(name: String, image: String) {
         
         self.name = name
@@ -36,10 +34,8 @@ struct MovieCellView: View {
                         .tracking(5)
                         .textCase(.uppercase)
                         .padding()
+                        .tag("movieName")
                         )
-        }.onReceive(inspection.notice) {
-            
-            self.inspection.visit(self, $0)
         }
     }
 }
