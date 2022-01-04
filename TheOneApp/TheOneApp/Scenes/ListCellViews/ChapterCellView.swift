@@ -12,8 +12,6 @@ struct ChapterCellView: View {
     let id: String
     let chapterName: String
     
-    internal let inspection = Inspection<Self>()
-    
     init(id: String, chapterName: String) {
         
         self.id = id
@@ -29,10 +27,8 @@ struct ChapterCellView: View {
                 Text(chapterName)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
+                    .tag("chapterName")
             }
-        }.onReceive(inspection.notice) {
-            
-            self.inspection.visit(self, $0)
         }
     }
 }
