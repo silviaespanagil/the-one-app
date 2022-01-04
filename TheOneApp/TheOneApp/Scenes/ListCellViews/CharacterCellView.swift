@@ -15,8 +15,6 @@ struct CharacterCellView: View {
     let name: String
     let image: String
     
-    internal let inspection = Inspection<Self>()
-    
     init(id: String, race: String?, name: String, image: String) {
         
         self.id = id
@@ -48,9 +46,6 @@ struct CharacterCellView: View {
                     .font(.footnote)
                     .tag("characterRace")
             }
-        }.onReceive(inspection.notice) {
-            
-            self.inspection.visit(self, $0)
         }
     }
 }
