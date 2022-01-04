@@ -15,12 +15,10 @@ extension MainCellView: Inspectable { }
 class MainCellViewInspectorTest: XCTestCase {
     
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
         super.setUp()
     }
     
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
@@ -29,17 +27,11 @@ class MainCellViewInspectorTest: XCTestCase {
     
     func testMenuTitleSetUp() throws {
         
-        let exp = sut.inspection.inspect { view in
-            
-            // When
-            let menuLabel = try! view.hStack(0).text(0).string()
-            
-            // Then
-            XCTAssertEqual(self.sut.name, menuLabel)
-        }
+        // When
+        let menuLabel = try! sut.inspect().find(viewWithTag: "menuTitle").text().string()
         
-        ViewHosting.host(view: sut)
-        wait(for: [exp], timeout: 2)
+        // Then
+        XCTAssertEqual(self.sut.name, menuLabel)
     }
     
 }
