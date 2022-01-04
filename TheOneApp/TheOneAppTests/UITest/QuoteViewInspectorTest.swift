@@ -31,12 +31,15 @@ class QuoteViewInspectorTest: XCTestCase {
         // Given
         let viewModel = QuoteViewModel()
         let tag = "quoteText"
+        let quote = ""
         let sut =  QuoteView(viewModel: viewModel)
         
         // When
         let quoteText = try! sut.inspect().find(viewWithTag: tag).text().string()
-        //TODO: Make this pass
+    
+        // Then
         XCTAssertNotNil(quoteText)
+        XCTAssertEqual("\"\(quote)\"", quoteText)
     }
 }
 
